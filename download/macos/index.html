@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Download Veyndesk for macOS – Free Remote Desktop</title>
+<meta name="description" content="Install Veyndesk 0.5.0 on macOS: download, requirements (macOS 10.15 Catalina or later, Apple Silicon or Intel), permissions and known limitations.">
+<link rel="canonical" href="https://veyndesk.github.io/download/macos/">
+<meta name="robots" content="index, follow">
+
+<meta name="theme-color" content="#0b0f17">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="stylesheet" href="/assets/site.css">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Veyndesk">
+<meta property="og:title" content="Download Veyndesk for macOS – Free Remote Desktop">
+<meta property="og:description" content="Install Veyndesk 0.5.0 on macOS: download, requirements (macOS 10.15 Catalina or later, Apple Silicon or Intel), permissions and known limitations.">
+<meta property="og:url" content="https://veyndesk.github.io/download/macos/">
+<meta property="og:image" content="https://veyndesk.github.io/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Veyndesk", "item": "https://veyndesk.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Download", "item": "https://veyndesk.github.io/download/"}, {"@type": "ListItem", "position": 3, "name": "macOS", "item": "https://veyndesk.github.io/download/macos/"}]}</script>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/assets/logo.png" alt="" width="34" height="34">Veyndesk</a>
+    <nav>
+      <a class="hide-sm on" href="/download/">Download</a>
+<a class="hide-sm" href="/docs/getting-started/">Get started</a>
+<a class="hide-sm" href="/help/">Help</a>
+<a class="hide-sm" href="/security/">Security</a>
+<a class="hide-sm" href="/compare/anydesk/">Compare</a>
+      <a class="btn primary small" href="/download/">Download</a>
+    </nav>
+  </div>
+</header>
+<main>
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/download/">Download</a> / <span>macOS</span></nav>
+<article class="wrap prose">
+<h1>Veyndesk for macOS</h1>
+<p class="lead">Requirements: macOS 10.15 Catalina or later, Apple Silicon or Intel.</p>
+<p class="updated">Last updated 21 October 2026 · Veyndesk 0.5.0</p>
+<p><a class="btn primary" href="https://github.com/veyndesk/veyndesk/releases/latest">⬇ Download Veyndesk 0.5.0 for macOS</a></p>
+<table class="t"><thead><tr><th>File</th><th>Use it for</th></tr></thead><tbody><tr><td><code>Veyndesk_0.5.0_universal.dmg</code></td><td>Universal app for Apple Silicon and Intel Macs.</td></tr></tbody></table>
+
+<h2>Install</h2>
+<ol>
+<li>Download <code>Veyndesk_0.5.0_universal.dmg</code> from the <a href="https://github.com/veyndesk/veyndesk/releases/latest">release page</a>, open it and drag Veyndesk to Applications.</li>
+<li>The first time, <b>right-click</b> Veyndesk in Applications → <b>Open</b> → <b>Open</b>. (The app isn't notarized by Apple yet, so a normal double-click is blocked.)
+  On newer macOS versions you may instead need System Settings → Privacy &amp; Security → <b>Open Anyway</b>.</li>
+</ol>
+<h2>Permissions (needed to be controlled)</h2>
+<p>To let a partner see and control your Mac, allow Veyndesk in System Settings → Privacy &amp; Security:</p>
+<ul><li><b>Screen Recording</b> (macOS 15+: <i>Screen &amp; System Audio Recording</i>) so the screen can be shared.</li>
+<li><b>Accessibility</b> so the partner's mouse and keyboard work.</li></ul>
+<p>Then quit and reopen Veyndesk. Step-by-step: <a href="/help/mac-permissions/">Mac screen permission</a>. You don't need these permissions only to control <i>another</i> computer.</p>
+<h2>Limitations on macOS</h2>
+<ul><li>Not notarized yet (right-click → Open on first start).</li>
+<li>Built and packaged automatically, but not yet tested by the maintainer on a physical Mac. Please <a href="https://github.com/veyndesk/veyndesk/issues">report problems</a>.</li></ul>
+<h2>Uninstall</h2>
+<p>Drag Veyndesk from Applications to the Trash. Settings are in <code>~/Library/Application Support/Veyndesk</code>.</p>
+<p>Next: <a href="/docs/getting-started/">connect to another computer</a>.</p>
+</article>
+</main>
+<footer>
+  <div class="wrap">
+    <div>
+      <b>Veyndesk</b> · free, open-source remote desktop (AGPL-3.0)<br>
+      <span class="muted">Latest version 0.5.0. Not affiliated with AnyDesk, TeamViewer or RustDesk.</span>
+    </div>
+    <div class="flinks">
+      <a href="/download/">Download</a> <a href="/docs/getting-started/">Get started</a> <a href="/help/">Help</a>
+      <a href="/security/">Security</a> <a href="/privacy/">Privacy</a> <a href="/about/">About</a>
+      <a href="/changelog/">Changelog</a> <a href="https://github.com/veyndesk/veyndesk">GitHub</a>
+    </div>
+  </div>
+</footer>
+<script>
+(function(){var u=navigator.userAgent,o=/Mac/i.test(u)&&!/iPhone|iPad/.test(u)?'mac':/Linux|X11/i.test(u)&&!/Android/i.test(u)?'linux':/Win/i.test(u)?'win':null;
+if(!o)return;var n={win:'Windows',mac:'macOS',linux:'Linux'}[o];document.querySelectorAll('[data-dl-main]').forEach(function(b){b.textContent='⬇ Download for '+n;b.href='/download/'+{win:'windows',mac:'macos',linux:'linux'}[o]+'/';});
+var c=document.querySelector('.dl [data-os="'+o+'"]');if(c)c.classList.add('mine');})();
+</script>
+</body>
+</html>

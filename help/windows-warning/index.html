@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Veyndesk: “Windows protected your PC” or Smart App Control blocked it</title>
+<meta name="description" content="Why Windows shows a SmartScreen or Smart App Control warning for the Veyndesk installer, and how to install it safely.">
+<link rel="canonical" href="https://veyndesk.github.io/help/windows-warning/">
+<meta name="robots" content="index, follow">
+
+<meta name="theme-color" content="#0b0f17">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="stylesheet" href="/assets/site.css">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Veyndesk">
+<meta property="og:title" content="Veyndesk: “Windows protected your PC” or Smart App Control blocked it">
+<meta property="og:description" content="Why Windows shows a SmartScreen or Smart App Control warning for the Veyndesk installer, and how to install it safely.">
+<meta property="og:url" content="https://veyndesk.github.io/help/windows-warning/">
+<meta property="og:image" content="https://veyndesk.github.io/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Veyndesk", "item": "https://veyndesk.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Help", "item": "https://veyndesk.github.io/help/"}, {"@type": "ListItem", "position": 3, "name": "Windows installer warning", "item": "https://veyndesk.github.io/help/windows-warning/"}]}</script>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/assets/logo.png" alt="" width="34" height="34">Veyndesk</a>
+    <nav>
+      <a class="hide-sm" href="/download/">Download</a>
+<a class="hide-sm" href="/docs/getting-started/">Get started</a>
+<a class="hide-sm on" href="/help/">Help</a>
+<a class="hide-sm" href="/security/">Security</a>
+<a class="hide-sm" href="/compare/anydesk/">Compare</a>
+      <a class="btn primary small" href="/download/">Download</a>
+    </nav>
+  </div>
+</header>
+<main>
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/help/">Help</a> / <span>Windows installer warning</span></nav>
+<article class="wrap prose">
+<h1>Windows installer warning</h1>
+<p class="lead">Why Windows shows a SmartScreen or Smart App Control warning for the Veyndesk installer, and how to install it safely.</p>
+<p class="updated">Last updated 21 October 2026 · Veyndesk 0.5.0</p>
+
+<p>The Veyndesk installer is <b>not code-signed yet</b>, so Windows doesn't recognise the publisher and may warn you.</p>
+<h2>“Windows protected your PC” (SmartScreen)</h2>
+<p>Click <b>More info</b>, check the file name is <code>Veyndesk_x.y.z_x64-setup.exe</code>, then click <b>Run anyway</b>.</p>
+<h2>Smart App Control blocked it</h2>
+<p>Smart App Control (Windows 11) blocks unsigned apps completely and has no “run anyway” button. Options:</p>
+<ul>
+<li>Wait for a signed release. Free code signing for open-source projects (SignPath Foundation) is planned.</li>
+<li>Turning Smart App Control off is possible in Windows Security → App &amp; browser control, but on many Windows versions it <b>can't be turned on again</b> without reinstalling Windows. Only do this if you understand that trade-off.</li>
+</ul>
+<h2>Is the download safe?</h2>
+<ul>
+<li>Download only from the official <a href="https://github.com/veyndesk/veyndesk/releases/latest">GitHub release page</a>.</li>
+<li>Files there are built by GitHub Actions from the public source code, and each has a SHA-256 checksum. In PowerShell: <code>Get-FileHash .\Veyndesk_0.5.0_x64-setup.exe</code> and compare.</li>
+</ul>
+</article>
+</main>
+<footer>
+  <div class="wrap">
+    <div>
+      <b>Veyndesk</b> · free, open-source remote desktop (AGPL-3.0)<br>
+      <span class="muted">Latest version 0.5.0. Not affiliated with AnyDesk, TeamViewer or RustDesk.</span>
+    </div>
+    <div class="flinks">
+      <a href="/download/">Download</a> <a href="/docs/getting-started/">Get started</a> <a href="/help/">Help</a>
+      <a href="/security/">Security</a> <a href="/privacy/">Privacy</a> <a href="/about/">About</a>
+      <a href="/changelog/">Changelog</a> <a href="https://github.com/veyndesk/veyndesk">GitHub</a>
+    </div>
+  </div>
+</footer>
+<script>
+(function(){var u=navigator.userAgent,o=/Mac/i.test(u)&&!/iPhone|iPad/.test(u)?'mac':/Linux|X11/i.test(u)&&!/Android/i.test(u)?'linux':/Win/i.test(u)?'win':null;
+if(!o)return;var n={win:'Windows',mac:'macOS',linux:'Linux'}[o];document.querySelectorAll('[data-dl-main]').forEach(function(b){b.textContent='⬇ Download for '+n;b.href='/download/'+{win:'windows',mac:'macos',linux:'linux'}[o]+'/';});
+var c=document.querySelector('.dl [data-os="'+o+'"]');if(c)c.classList.add('mine');})();
+</script>
+</body>
+</html>

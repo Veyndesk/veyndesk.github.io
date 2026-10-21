@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About Veyndesk: Open-Source Remote Desktop Project</title>
+<meta name="description" content="Who maintains Veyndesk, the project status, latest version, licence and how to get support or contribute.">
+<link rel="canonical" href="https://veyndesk.github.io/about/">
+<meta name="robots" content="index, follow">
+
+<meta name="theme-color" content="#0b0f17">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="stylesheet" href="/assets/site.css">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Veyndesk">
+<meta property="og:title" content="About Veyndesk: Open-Source Remote Desktop Project">
+<meta property="og:description" content="Who maintains Veyndesk, the project status, latest version, licence and how to get support or contribute.">
+<meta property="og:url" content="https://veyndesk.github.io/about/">
+<meta property="og:image" content="https://veyndesk.github.io/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Veyndesk", "item": "https://veyndesk.github.io/"}, {"@type": "ListItem", "position": 2, "name": "About", "item": "https://veyndesk.github.io/about/"}]}</script>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/assets/logo.png" alt="" width="34" height="34">Veyndesk</a>
+    <nav>
+      <a class="hide-sm" href="/download/">Download</a>
+<a class="hide-sm" href="/docs/getting-started/">Get started</a>
+<a class="hide-sm" href="/help/">Help</a>
+<a class="hide-sm" href="/security/">Security</a>
+<a class="hide-sm" href="/compare/anydesk/">Compare</a>
+      <a class="btn primary small" href="/download/">Download</a>
+    </nav>
+  </div>
+</header>
+<main>
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <span>About</span></nav>
+<article class="wrap prose">
+<h1>About Veyndesk</h1>
+<p class="lead">A free, open-source remote desktop, built in the open.</p>
+<p class="updated">Last updated 21 October 2026 · Veyndesk 0.5.0</p>
+
+<h2>Who makes it</h2>
+<p>Veyndesk is an independent open-source project maintained on GitHub by <a href="https://github.com/KavindaBanukaVC">KavindaBanukaVC</a>, in the
+<a href="https://github.com/veyndesk">Veyndesk organisation</a>. It is not a company product and has no paid plans. It is written in Rust (the app is built with Tauri).</p>
+<h2>Project status</h2>
+<ul>
+<li><b>Latest version:</b> 0.5.0, released 21 October 2026. See the <a href="/changelog/">changelog</a>.</li>
+<li><b>Stage:</b> early. The core works (connect by ID, accept, control); file transfer, mobile apps, Wayland and code signing are not done yet.</li>
+<li><b>What's tested:</b> see the <a href="/#tested">test status table</a>.</li>
+<li><b>Licence:</b> <a href="https://github.com/veyndesk/veyndesk/blob/main/LICENSE">GNU AGPL-3.0</a>. Some ideas are inspired by RustDesk (also AGPL-3.0).</li>
+</ul>
+<h2>Get help or get involved</h2>
+<ul>
+<li><a href="/help/">Help and troubleshooting</a></li>
+<li><a href="https://github.com/veyndesk/veyndesk/issues">Report a bug or request a feature</a> on GitHub</li>
+<li><a href="/security/#report">Report a security issue privately</a></li>
+<li><a href="https://github.com/veyndesk/veyndesk">Source code</a>; contributions are welcome.</li>
+</ul>
+
+</article>
+</main>
+<footer>
+  <div class="wrap">
+    <div>
+      <b>Veyndesk</b> · free, open-source remote desktop (AGPL-3.0)<br>
+      <span class="muted">Latest version 0.5.0. Not affiliated with AnyDesk, TeamViewer or RustDesk.</span>
+    </div>
+    <div class="flinks">
+      <a href="/download/">Download</a> <a href="/docs/getting-started/">Get started</a> <a href="/help/">Help</a>
+      <a href="/security/">Security</a> <a href="/privacy/">Privacy</a> <a href="/about/">About</a>
+      <a href="/changelog/">Changelog</a> <a href="https://github.com/veyndesk/veyndesk">GitHub</a>
+    </div>
+  </div>
+</footer>
+<script>
+(function(){var u=navigator.userAgent,o=/Mac/i.test(u)&&!/iPhone|iPad/.test(u)?'mac':/Linux|X11/i.test(u)&&!/Android/i.test(u)?'linux':/Win/i.test(u)?'win':null;
+if(!o)return;var n={win:'Windows',mac:'macOS',linux:'Linux'}[o];document.querySelectorAll('[data-dl-main]').forEach(function(b){b.textContent='⬇ Download for '+n;b.href='/download/'+{win:'windows',mac:'macos',linux:'linux'}[o]+'/';});
+var c=document.querySelector('.dl [data-os="'+o+'"]');if(c)c.classList.add('mine');})();
+</script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Veyndesk on Mac: black screen or mouse not working? Allow Screen Recording and Accessibility</title>
+<meta name="description" content="Fix a black screen or non-working mouse when controlling a Mac with Veyndesk: allow Screen Recording and Accessibility in macOS Privacy &amp; Security.">
+<link rel="canonical" href="https://veyndesk.github.io/help/mac-permissions/">
+<meta name="robots" content="index, follow">
+
+<meta name="theme-color" content="#0b0f17">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="stylesheet" href="/assets/site.css">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Veyndesk">
+<meta property="og:title" content="Veyndesk on Mac: black screen or mouse not working? Allow Screen Recording and Accessibility">
+<meta property="og:description" content="Fix a black screen or non-working mouse when controlling a Mac with Veyndesk: allow Screen Recording and Accessibility in macOS Privacy &amp; Security.">
+<meta property="og:url" content="https://veyndesk.github.io/help/mac-permissions/">
+<meta property="og:image" content="https://veyndesk.github.io/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Veyndesk", "item": "https://veyndesk.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Help", "item": "https://veyndesk.github.io/help/"}, {"@type": "ListItem", "position": 3, "name": "Mac: screen permission", "item": "https://veyndesk.github.io/help/mac-permissions/"}]}</script>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/assets/logo.png" alt="" width="34" height="34">Veyndesk</a>
+    <nav>
+      <a class="hide-sm" href="/download/">Download</a>
+<a class="hide-sm" href="/docs/getting-started/">Get started</a>
+<a class="hide-sm on" href="/help/">Help</a>
+<a class="hide-sm" href="/security/">Security</a>
+<a class="hide-sm" href="/compare/anydesk/">Compare</a>
+      <a class="btn primary small" href="/download/">Download</a>
+    </nav>
+  </div>
+</header>
+<main>
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/help/">Help</a> / <span>Mac: screen permission</span></nav>
+<article class="wrap prose">
+<h1>Mac: screen permission</h1>
+<p class="lead">Fix a black screen or non-working mouse when controlling a Mac with Veyndesk: allow Screen Recording and Accessibility in macOS Privacy & Security.</p>
+<p class="updated">Last updated 21 October 2026 · Veyndesk 0.5.0</p>
+
+<p>macOS doesn't let apps see the screen or control the mouse until you allow it. If your partner sees a <b>black or empty screen</b>, or the <b>mouse and keyboard don't work</b>, do this on the Mac being controlled:</p>
+<h2>Allow screen recording</h2>
+<ol>
+<li>Open <b>System Settings → Privacy &amp; Security → Screen Recording</b> (on macOS 15 and later: <b>Screen &amp; System Audio Recording</b>).
+On macOS 12 and earlier: System Preferences → Security &amp; Privacy → Privacy → Screen Recording.</li>
+<li>Turn <b>Veyndesk</b> on. If it isn't listed, click <b>+</b> and choose Veyndesk in Applications.</li>
+</ol>
+<h2>Allow control (Accessibility)</h2>
+<ol>
+<li>Open <b>System Settings → Privacy &amp; Security → Accessibility</b>.</li>
+<li>Turn <b>Veyndesk</b> on (or add it with <b>+</b>).</li>
+</ol>
+<h2>Restart Veyndesk</h2>
+<p>Quit Veyndesk completely (Veyndesk → Quit) and open it again; macOS applies these permissions only after a restart. The partner must reconnect.</p>
+<h2>Still not working?</h2>
+<ul>
+<li>If you updated Veyndesk, macOS may keep an old entry. Remove Veyndesk from both lists with <b>−</b>, add it again, and restart the app.</li>
+<li>“Veyndesk can't be opened because it is from an unidentified developer”: right-click the app → <b>Open</b> → <b>Open</b>, or use <b>Open Anyway</b> in Privacy &amp; Security. The app isn't notarized yet.</li>
+</ul>
+<p>macOS support is new and has not yet been tested by the maintainer on a physical Mac, so please <a href="https://github.com/veyndesk/veyndesk/issues/new">report</a> what you see, including your macOS version and Mac model.</p>
+</article>
+</main>
+<footer>
+  <div class="wrap">
+    <div>
+      <b>Veyndesk</b> · free, open-source remote desktop (AGPL-3.0)<br>
+      <span class="muted">Latest version 0.5.0. Not affiliated with AnyDesk, TeamViewer or RustDesk.</span>
+    </div>
+    <div class="flinks">
+      <a href="/download/">Download</a> <a href="/docs/getting-started/">Get started</a> <a href="/help/">Help</a>
+      <a href="/security/">Security</a> <a href="/privacy/">Privacy</a> <a href="/about/">About</a>
+      <a href="/changelog/">Changelog</a> <a href="https://github.com/veyndesk/veyndesk">GitHub</a>
+    </div>
+  </div>
+</footer>
+<script>
+(function(){var u=navigator.userAgent,o=/Mac/i.test(u)&&!/iPhone|iPad/.test(u)?'mac':/Linux|X11/i.test(u)&&!/Android/i.test(u)?'linux':/Win/i.test(u)?'win':null;
+if(!o)return;var n={win:'Windows',mac:'macOS',linux:'Linux'}[o];document.querySelectorAll('[data-dl-main]').forEach(function(b){b.textContent='⬇ Download for '+n;b.href='/download/'+{win:'windows',mac:'macos',linux:'linux'}[o]+'/';});
+var c=document.querySelector('.dl [data-os="'+o+'"]');if(c)c.classList.add('mine');})();
+</script>
+</body>
+</html>

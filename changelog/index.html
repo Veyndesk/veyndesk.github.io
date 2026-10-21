@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Veyndesk Changelog and Release History</title>
+<meta name="description" content="Release history of Veyndesk: what changed in each version, with release dates. Latest: 0.5.0.">
+<link rel="canonical" href="https://veyndesk.github.io/changelog/">
+<meta name="robots" content="index, follow">
+
+<meta name="theme-color" content="#0b0f17">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="stylesheet" href="/assets/site.css">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Veyndesk">
+<meta property="og:title" content="Veyndesk Changelog and Release History">
+<meta property="og:description" content="Release history of Veyndesk: what changed in each version, with release dates. Latest: 0.5.0.">
+<meta property="og:url" content="https://veyndesk.github.io/changelog/">
+<meta property="og:image" content="https://veyndesk.github.io/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Veyndesk", "item": "https://veyndesk.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Changelog", "item": "https://veyndesk.github.io/changelog/"}]}</script>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/assets/logo.png" alt="" width="34" height="34">Veyndesk</a>
+    <nav>
+      <a class="hide-sm" href="/download/">Download</a>
+<a class="hide-sm" href="/docs/getting-started/">Get started</a>
+<a class="hide-sm" href="/help/">Help</a>
+<a class="hide-sm" href="/security/">Security</a>
+<a class="hide-sm" href="/compare/anydesk/">Compare</a>
+      <a class="btn primary small" href="/download/">Download</a>
+    </nav>
+  </div>
+</header>
+<main>
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <span>Changelog</span></nav>
+<article class="wrap prose">
+<h1>Changelog</h1>
+<p class="lead">What changed in each version.</p>
+<p class="updated">Last updated 21 October 2026 · Veyndesk 0.5.0</p>
+
+<p>All releases with downloads: <a href="https://github.com/veyndesk/veyndesk/releases">GitHub releases</a>.</p>
+<h2 id="next">Next version (unreleased)</h2>
+<ul>
+<li>Settings folder renamed from <code>VeloDesk</code> to <code>Veyndesk</code>; existing settings and IDs are moved automatically on first start.</li>
+<li>More accurate connection text in the app.</li>
+</ul>
+<h2 id="v0.5.0">0.5.0 – 21 October 2026</h2>
+<ul>
+<li><b>macOS app</b>: universal .dmg for Apple Silicon and Intel, Retina-aware mouse positioning, macOS key codes.</li>
+<li><b>Linux app</b>: .deb and AppImage (X11).</li>
+<li>The relay works on all three systems; <code>cloudflared</code> is downloaded automatically for each.</li>
+</ul>
+<h2 id="v0.4.0">0.4.0 – 21 October 2026</h2>
+<p>First public release, Windows only.</p>
+<ul>
+<li>Connect by ID and password; direct P2P connection (WebRTC) with automatic relay fallback.</li>
+<li>Accept / Deny prompt, permanent password for unattended access, wrong-password lockout.</li>
+<li>Clipboard sync, multi-monitor, adaptive quality, local network discovery.</li>
+<li>Windows installer (with firewall rule) and portable zip.</li>
+</ul>
+
+</article>
+</main>
+<footer>
+  <div class="wrap">
+    <div>
+      <b>Veyndesk</b> · free, open-source remote desktop (AGPL-3.0)<br>
+      <span class="muted">Latest version 0.5.0. Not affiliated with AnyDesk, TeamViewer or RustDesk.</span>
+    </div>
+    <div class="flinks">
+      <a href="/download/">Download</a> <a href="/docs/getting-started/">Get started</a> <a href="/help/">Help</a>
+      <a href="/security/">Security</a> <a href="/privacy/">Privacy</a> <a href="/about/">About</a>
+      <a href="/changelog/">Changelog</a> <a href="https://github.com/veyndesk/veyndesk">GitHub</a>
+    </div>
+  </div>
+</footer>
+<script>
+(function(){var u=navigator.userAgent,o=/Mac/i.test(u)&&!/iPhone|iPad/.test(u)?'mac':/Linux|X11/i.test(u)&&!/Android/i.test(u)?'linux':/Win/i.test(u)?'win':null;
+if(!o)return;var n={win:'Windows',mac:'macOS',linux:'Linux'}[o];document.querySelectorAll('[data-dl-main]').forEach(function(b){b.textContent='⬇ Download for '+n;b.href='/download/'+{win:'windows',mac:'macos',linux:'linux'}[o]+'/';});
+var c=document.querySelector('.dl [data-os="'+o+'"]');if(c)c.classList.add('mine');})();
+</script>
+</body>
+</html>

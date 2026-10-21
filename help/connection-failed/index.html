@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Veyndesk “partner not found” or connection failed: how to fix it</title>
+<meta name="description" content="Fix Veyndesk connection problems: partner not found, wrong password, could not open a direct connection, or relay not available.">
+<link rel="canonical" href="https://veyndesk.github.io/help/connection-failed/">
+<meta name="robots" content="index, follow">
+
+<meta name="theme-color" content="#0b0f17">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="stylesheet" href="/assets/site.css">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Veyndesk">
+<meta property="og:title" content="Veyndesk “partner not found” or connection failed: how to fix it">
+<meta property="og:description" content="Fix Veyndesk connection problems: partner not found, wrong password, could not open a direct connection, or relay not available.">
+<meta property="og:url" content="https://veyndesk.github.io/help/connection-failed/">
+<meta property="og:image" content="https://veyndesk.github.io/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Veyndesk", "item": "https://veyndesk.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Help", "item": "https://veyndesk.github.io/help/"}, {"@type": "ListItem", "position": 3, "name": "Connection failed or partner not found", "item": "https://veyndesk.github.io/help/connection-failed/"}]}</script>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/assets/logo.png" alt="" width="34" height="34">Veyndesk</a>
+    <nav>
+      <a class="hide-sm" href="/download/">Download</a>
+<a class="hide-sm" href="/docs/getting-started/">Get started</a>
+<a class="hide-sm on" href="/help/">Help</a>
+<a class="hide-sm" href="/security/">Security</a>
+<a class="hide-sm" href="/compare/anydesk/">Compare</a>
+      <a class="btn primary small" href="/download/">Download</a>
+    </nav>
+  </div>
+</header>
+<main>
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/help/">Help</a> / <span>Connection failed or partner not found</span></nav>
+<article class="wrap prose">
+<h1>Connection failed or partner not found</h1>
+<p class="lead">Fix Veyndesk connection problems: partner not found, wrong password, could not open a direct connection, or relay not available.</p>
+<p class="updated">Last updated 21 October 2026 · Veyndesk 0.5.0</p>
+
+<h2>Check the basics</h2>
+<ol>
+<li><b>Veyndesk is open on both computers</b> and the status says <b>Ready</b> (green dot).</li>
+<li><b>Both run the same version</b>, ideally the <a href="/download/">latest</a>. The version is in the window title.</li>
+<li><b>The ID is right</b> (9 digits) and you used the <b>current</b> password. A new one-time password is made every time the app starts.</li>
+</ol>
+
+<h2>Messages and what they mean</h2>
+<table class="t"><thead><tr><th>Message</th><th>What to do</th></tr></thead><tbody>
+<tr><td>Wrong password</td><td>Ask for the current password. Passwords are case-sensitive.</td></tr>
+<tr><td>Too many wrong passwords. Try again in a few minutes.</td><td>8 wrong attempts in 5 minutes. Wait about 5 minutes.</td></tr>
+<tr><td>No one accepted the connection.</td><td>The other person didn't click Accept within ~45 seconds. Try again while they watch the screen.</td></tr>
+<tr><td>Could not open a direct connection (the network blocks it).</td><td>Direct P2P failed and no relay was available. See below.</td></tr>
+<tr><td>Remote access is disabled on this device.</td><td>The other computer has no password enabled. They should open Veyndesk normally (a one-time password is shown) or set one in Settings.</td></tr>
+</tbody></table>
+
+<h2>Different networks (home, office, mobile data)</h2>
+<p>Veyndesk first tries a <b>direct</b> connection, then a <b>relay</b> that the shared computer opens through Cloudflare. If both fail:</p>
+<ul>
+<li><b>Wait 30–60 seconds after starting Veyndesk</b> on the shared computer, so the relay has time to start (it downloads <code>cloudflared</code> the first time).</li>
+<li><b>Firewall / company network:</b> the shared computer needs outbound HTTPS to <code>ntfy.sh</code>, <code>github.com</code> (first start) and Cloudflare. Strict corporate firewalls or DNS filters may block these.</li>
+<li><b>Antivirus</b> may block <code>cloudflared</code>. Allow it, or place a trusted copy of <code>cloudflared</code> next to Veyndesk.</li>
+<li><b>Windows:</b> allow Veyndesk in Windows Firewall (the installer does this; the portable version asks).</li>
+<li>Try a different network (for example a phone hotspot) to find out which side is blocking.</li>
+</ul>
+
+<h2>Same network</h2>
+<ul>
+<li>Try typing the other computer's <b>IP address</b> instead of the ID.</li>
+<li>Discovery uses <b>UDP port 21119</b>. Guest Wi-Fi and some routers ("AP isolation") block devices from seeing each other.</li>
+</ul>
+
+<h2>Still stuck?</h2>
+<p><a href="https://github.com/veyndesk/veyndesk/issues/new">Open an issue</a> with both operating systems, the Veyndesk version, the exact message, and whether the computers are on the same network.
+<b>Don't post your password.</b></p>
+</article>
+</main>
+<footer>
+  <div class="wrap">
+    <div>
+      <b>Veyndesk</b> · free, open-source remote desktop (AGPL-3.0)<br>
+      <span class="muted">Latest version 0.5.0. Not affiliated with AnyDesk, TeamViewer or RustDesk.</span>
+    </div>
+    <div class="flinks">
+      <a href="/download/">Download</a> <a href="/docs/getting-started/">Get started</a> <a href="/help/">Help</a>
+      <a href="/security/">Security</a> <a href="/privacy/">Privacy</a> <a href="/about/">About</a>
+      <a href="/changelog/">Changelog</a> <a href="https://github.com/veyndesk/veyndesk">GitHub</a>
+    </div>
+  </div>
+</footer>
+<script>
+(function(){var u=navigator.userAgent,o=/Mac/i.test(u)&&!/iPhone|iPad/.test(u)?'mac':/Linux|X11/i.test(u)&&!/Android/i.test(u)?'linux':/Win/i.test(u)?'win':null;
+if(!o)return;var n={win:'Windows',mac:'macOS',linux:'Linux'}[o];document.querySelectorAll('[data-dl-main]').forEach(function(b){b.textContent='⬇ Download for '+n;b.href='/download/'+{win:'windows',mac:'macos',linux:'linux'}[o]+'/';});
+var c=document.querySelector('.dl [data-os="'+o+'"]');if(c)c.classList.add('mine');})();
+</script>
+</body>
+</html>

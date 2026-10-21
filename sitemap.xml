@@ -1,4 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://veyndesk.github.io/</loc><lastmod>2026-10-21</lastmod><priority>1.0</priority></url>
+  <url><loc>https://veyndesk.github.io/</loc><lastmod>2026-10-21</lastmod></url>
+  <url><loc>https://veyndesk.github.io/download/</loc><lastmod>2026-10-21</lastmod></url>
+  <url><loc>https://veyndesk.github.io/download/windows/</loc><lastmod>2026-10-21</lastmod></url>
+  <url><loc>https://veyndesk.github.io/download/macos/</loc><lastmod>2026-10-21</lastmod></url>
+  <url><loc>https://veyndesk.github.io/download/linux/</loc><lastmod>2026-10-21</lastmod></url>
+  <url><loc>https://veyndesk.github.io/docs/getting-started/</loc><lastmod>2026-10-21</lastmod></url>
+  <url><loc>https://veyndesk.github.io/security/</loc><lastmod>2026-10-21</lastmod></url>
+  <url><loc>https://veyndesk.github.io/privacy/</loc><lastmod>2026-10-21</lastmod></url>
+  <url><loc>https://veyndesk.github.io/help/</loc><lastmod>2026-10-21</lastmod></url>
+  <url><loc>https://veyndesk.github.io/help/connection-failed/</loc><lastmod>2026-10-21</lastmod></url>
+  <url><loc>https://veyndesk.github.io/help/mac-permissions/</loc><lastmod>2026-10-21</lastmod></url>
+  <url><loc>https://veyndesk.github.io/help/linux-wayland/</loc><lastmod>2026-10-21</lastmod></url>
+  <url><loc>https://veyndesk.github.io/help/windows-warning/</loc><lastmod>2026-10-21</lastmod></url>
+  <url><loc>https://veyndesk.github.io/compare/anydesk/</loc><lastmod>2026-10-21</lastmod></url>
+  <url><loc>https://veyndesk.github.io/compare/rustdesk/</loc><lastmod>2026-10-21</lastmod></url>
+  <url><loc>https://veyndesk.github.io/about/</loc><lastmod>2026-10-21</lastmod></url>
+  <url><loc>https://veyndesk.github.io/changelog/</loc><lastmod>2026-10-21</lastmod></url>
 </urlset>

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Use Veyndesk: Connect to Another Computer (Step by Step)</title>
+<meta name="description" content="Step-by-step guide with screenshots: install Veyndesk, share your ID and password, connect, and accept the session.">
+<link rel="canonical" href="https://veyndesk.github.io/docs/getting-started/">
+<meta name="robots" content="index, follow">
+
+<meta name="theme-color" content="#0b0f17">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="stylesheet" href="/assets/site.css">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Veyndesk">
+<meta property="og:title" content="How to Use Veyndesk: Connect to Another Computer (Step by Step)">
+<meta property="og:description" content="Step-by-step guide with screenshots: install Veyndesk, share your ID and password, connect, and accept the session.">
+<meta property="og:url" content="https://veyndesk.github.io/docs/getting-started/">
+<meta property="og:image" content="https://veyndesk.github.io/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Veyndesk", "item": "https://veyndesk.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Get started", "item": "https://veyndesk.github.io/docs/getting-started/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HowTo", "name": "Connect to another computer with Veyndesk", "step": [{"@type": "HowToStep", "name": "Share your ID and password", "text": "On the computer that needs help, open Veyndesk and read out the 9-digit ID and the password.", "url": "https://veyndesk.github.io/docs/getting-started/#step1"}, {"@type": "HowToStep", "name": "Enter the partner's ID", "text": "On the helper's computer, type the partner's ID under Remote desk, click Connect and enter the password.", "url": "https://veyndesk.github.io/docs/getting-started/#step2"}, {"@type": "HowToStep", "name": "Accept the connection", "text": "On the computer that needs help, click Accept in the Incoming connection prompt.", "url": "https://veyndesk.github.io/docs/getting-started/#step3"}, {"@type": "HowToStep", "name": "Control the remote computer", "text": "The helper now sees the screen and can use mouse and keyboard; either side can disconnect.", "url": "https://veyndesk.github.io/docs/getting-started/#step4"}]}</script>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/assets/logo.png" alt="" width="34" height="34">Veyndesk</a>
+    <nav>
+      <a class="hide-sm" href="/download/">Download</a>
+<a class="hide-sm on" href="/docs/getting-started/">Get started</a>
+<a class="hide-sm" href="/help/">Help</a>
+<a class="hide-sm" href="/security/">Security</a>
+<a class="hide-sm" href="/compare/anydesk/">Compare</a>
+      <a class="btn primary small" href="/download/">Download</a>
+    </nav>
+  </div>
+</header>
+<main>
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <span>Get started</span></nav>
+<article class="wrap prose">
+<h1>Getting started: connect to another computer</h1>
+<p class="lead">Four steps, with real screenshots: share the ID and password, connect, accept, control.</p>
+<p class="updated">Last updated 21 October 2026 · Veyndesk 0.5.0</p>
+
+<p>Install Veyndesk on <b>both</b> computers first (<a href="/download/">Download</a>). The screenshots were taken on Linux on 21 October 2026;
+Windows and macOS look the same. The IDs and passwords shown are from a test machine.</p>
+
+<h2 id="step1">1. The person who needs help: read out your ID and password</h2>
+<p>Open Veyndesk. Under <b>This desk</b> you'll see <b>your address (ID)</b>, 9 digits, and a <b>password</b> of 8 letters and numbers.
+Tell your partner both (or use the Copy buttons). The status at the top right should say <b>Ready</b>.</p>
+<figure><img src="/assets/img/01-main.png" alt="Veyndesk main window with the ID 938 329 942 and a one-time password" loading="lazy"><figcaption>This desk: the ID and one-time password to give to your partner.</figcaption></figure>
+<p>The password is a <b>one-time password</b>: a new one is made every time Veyndesk starts, or when you click <b>New</b>.</p>
+
+<h2 id="step2">2. The helper: enter the partner's ID and click Connect</h2>
+<figure><img src="/assets/img/02-enter-id.png" alt="Partner ID 208385958 typed into the Remote desk field" loading="lazy"><figcaption>Type the partner's ID under Remote desk, then click Connect.</figcaption></figure>
+<p>A new window opens. Enter the partner's password and click <b>Connect</b>.</p>
+<figure><img src="/assets/img/03-password.png" alt="Viewer window asking for the partner&#x27;s password" loading="lazy"><figcaption>Enter the password shown on the other computer.</figcaption></figure>
+
+<h2 id="step3">3. The person who needs help: Accept</h2>
+<p>If the password is right, the other computer shows <b>Incoming connection</b>. Click <b>Accept</b> to allow it, or <b>Deny</b>.
+If nobody answers within about 45 seconds, the connection is refused.</p>
+<figure><img src="/assets/img/04-accept.png" alt="Incoming connection prompt with Deny and Accept buttons" loading="lazy"><figcaption>Nobody sees your screen until you click Accept.</figcaption></figure>
+<p class="note-box">The prompt appears for one-time-password sessions while <i>ask before accepting</i> is on in Settings (the default). Sessions using a
+<b>permanent password</b> start <b>without</b> a prompt. See <a href="/security/#unattended">unattended access</a>.</p>
+
+<h2 id="step4">4. Connected</h2>
+<p>The helper now sees the screen and can use the mouse and keyboard. The shared computer shows <b>Your screen is being shared</b> and lists the session.
+Either side can end it: <b>Disconnect</b> in the viewer, or <b>Disconnect all</b> on the shared computer.</p>
+<figure><img src="/assets/img/06-shared.png" alt="Shared computer showing &#x27;Your screen is being shared&#x27; and one live session" loading="lazy"><figcaption>The shared computer always shows when someone is connected.</figcaption></figure>
+<figure><img src="/assets/img/05-session.png" alt="Viewer window on the left showing the remote screen, with the host app on the right" loading="lazy"><figcaption>Test setup: both apps on one screen, so the viewer (left) shows the host screen including itself.</figcaption></figure>
+<p>In the viewer toolbar: <b>Fit</b> (scale to window), <b>Fullscreen</b>, <b>Keys</b> (Ctrl+Alt+Del and other special keys), <b>Clipboard</b>, <b>Refresh</b>, <b>Disconnect</b>.</p>
+
+<h2>On the same network</h2>
+<p>Computers on the same network find each other automatically. You can also type the other computer's <b>IP address</b> instead of its ID.
+Note: connections by IP address are <a href="/security/#encryption">not encrypted yet</a>; prefer the ID on networks you don't trust.</p>
+
+<h2>Didn't work?</h2>
+<ul><li><a href="/help/connection-failed/">"Partner not found" / connection failed</a></li>
+<li><a href="/help/mac-permissions/">Mac: black screen or mouse doesn't move</a></li>
+<li><a href="/help/linux-wayland/">Linux: screen not shared (Wayland)</a></li></ul>
+
+</article>
+</main>
+<footer>
+  <div class="wrap">
+    <div>
+      <b>Veyndesk</b> · free, open-source remote desktop (AGPL-3.0)<br>
+      <span class="muted">Latest version 0.5.0. Not affiliated with AnyDesk, TeamViewer or RustDesk.</span>
+    </div>
+    <div class="flinks">
+      <a href="/download/">Download</a> <a href="/docs/getting-started/">Get started</a> <a href="/help/">Help</a>
+      <a href="/security/">Security</a> <a href="/privacy/">Privacy</a> <a href="/about/">About</a>
+      <a href="/changelog/">Changelog</a> <a href="https://github.com/veyndesk/veyndesk">GitHub</a>
+    </div>
+  </div>
+</footer>
+<script>
+(function(){var u=navigator.userAgent,o=/Mac/i.test(u)&&!/iPhone|iPad/.test(u)?'mac':/Linux|X11/i.test(u)&&!/Android/i.test(u)?'linux':/Win/i.test(u)?'win':null;
+if(!o)return;var n={win:'Windows',mac:'macOS',linux:'Linux'}[o];document.querySelectorAll('[data-dl-main]').forEach(function(b){b.textContent='⬇ Download for '+n;b.href='/download/'+{win:'windows',mac:'macos',linux:'linux'}[o]+'/';});
+var c=document.querySelector('.dl [data-os="'+o+'"]');if(c)c.classList.add('mine');})();
+</script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Veyndesk on Linux: screen not shared? Switch from Wayland to X11 (Xorg)</title>
+<meta name="description" content="Veyndesk currently supports Linux X11 sessions only. How to check whether you&#x27;re on Wayland and how to switch to Xorg on Ubuntu, Fedora and others.">
+<link rel="canonical" href="https://veyndesk.github.io/help/linux-wayland/">
+<meta name="robots" content="index, follow">
+
+<meta name="theme-color" content="#0b0f17">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="stylesheet" href="/assets/site.css">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Veyndesk">
+<meta property="og:title" content="Veyndesk on Linux: screen not shared? Switch from Wayland to X11 (Xorg)">
+<meta property="og:description" content="Veyndesk currently supports Linux X11 sessions only. How to check whether you&#x27;re on Wayland and how to switch to Xorg on Ubuntu, Fedora and others.">
+<meta property="og:url" content="https://veyndesk.github.io/help/linux-wayland/">
+<meta property="og:image" content="https://veyndesk.github.io/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Veyndesk", "item": "https://veyndesk.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Help", "item": "https://veyndesk.github.io/help/"}, {"@type": "ListItem", "position": 3, "name": "Linux: X11 vs Wayland", "item": "https://veyndesk.github.io/help/linux-wayland/"}]}</script>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/assets/logo.png" alt="" width="34" height="34">Veyndesk</a>
+    <nav>
+      <a class="hide-sm" href="/download/">Download</a>
+<a class="hide-sm" href="/docs/getting-started/">Get started</a>
+<a class="hide-sm on" href="/help/">Help</a>
+<a class="hide-sm" href="/security/">Security</a>
+<a class="hide-sm" href="/compare/anydesk/">Compare</a>
+      <a class="btn primary small" href="/download/">Download</a>
+    </nav>
+  </div>
+</header>
+<main>
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/help/">Help</a> / <span>Linux: X11 vs Wayland</span></nav>
+<article class="wrap prose">
+<h1>Linux: X11 vs Wayland</h1>
+<p class="lead">Veyndesk currently supports Linux X11 sessions only. How to check whether you're on Wayland and how to switch to Xorg on Ubuntu, Fedora and others.</p>
+<p class="updated">Last updated 21 October 2026 · Veyndesk 0.5.0</p>
+
+<p>Veyndesk on Linux currently works only in an <b>X11 (Xorg)</b> session. In a <b>Wayland</b> session the screen can't be captured or controlled this way. Wayland support is planned.</p>
+<h2>Check which one you use</h2>
+<pre>echo $XDG_SESSION_TYPE</pre>
+<p>It prints <code>x11</code> or <code>wayland</code>.</p>
+<h2>Switch to X11</h2>
+<ul>
+<li><b>Ubuntu (GNOME):</b> log out, click your name, click the <b>gear icon</b> at the bottom right, choose <b>Ubuntu on Xorg</b>, then log in.</li>
+<li><b>Fedora (GNOME):</b> the gear icon on the login screen offers <b>GNOME on Xorg</b> if the X11 session package is installed. Recent Fedora versions may not include it.</li>
+<li><b>KDE Plasma:</b> choose <b>Plasma (X11)</b> in the session menu on the login screen, if your distribution still provides it.</li>
+<li><b>Linux Mint (Cinnamon), Xfce, MATE:</b> already X11 by default.</li>
+</ul>
+<h2>Other Linux notes</h2>
+<ul><li>Packages are 64-bit x86 only.</li>
+<li>If the AppImage doesn't start, make it executable (<code>chmod +x</code>); some systems also need <code>libfuse2</code>.</li></ul>
+</article>
+</main>
+<footer>
+  <div class="wrap">
+    <div>
+      <b>Veyndesk</b> · free, open-source remote desktop (AGPL-3.0)<br>
+      <span class="muted">Latest version 0.5.0. Not affiliated with AnyDesk, TeamViewer or RustDesk.</span>
+    </div>
+    <div class="flinks">
+      <a href="/download/">Download</a> <a href="/docs/getting-started/">Get started</a> <a href="/help/">Help</a>
+      <a href="/security/">Security</a> <a href="/privacy/">Privacy</a> <a href="/about/">About</a>
+      <a href="/changelog/">Changelog</a> <a href="https://github.com/veyndesk/veyndesk">GitHub</a>
+    </div>
+  </div>
+</footer>
+<script>
+(function(){var u=navigator.userAgent,o=/Mac/i.test(u)&&!/iPhone|iPad/.test(u)?'mac':/Linux|X11/i.test(u)&&!/Android/i.test(u)?'linux':/Win/i.test(u)?'win':null;
+if(!o)return;var n={win:'Windows',mac:'macOS',linux:'Linux'}[o];document.querySelectorAll('[data-dl-main]').forEach(function(b){b.textContent='⬇ Download for '+n;b.href='/download/'+{win:'windows',mac:'macos',linux:'linux'}[o]+'/';});
+var c=document.querySelector('.dl [data-os="'+o+'"]');if(c)c.classList.add('mine');})();
+</script>
+</body>
+</html>

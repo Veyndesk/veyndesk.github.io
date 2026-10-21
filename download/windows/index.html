@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Download Veyndesk for Windows – Free Remote Desktop</title>
+<meta name="description" content="Install Veyndesk 0.5.0 on Windows: download, requirements (Windows 10 or 11, 64-bit (x64)), permissions and known limitations.">
+<link rel="canonical" href="https://veyndesk.github.io/download/windows/">
+<meta name="robots" content="index, follow">
+
+<meta name="theme-color" content="#0b0f17">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="stylesheet" href="/assets/site.css">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Veyndesk">
+<meta property="og:title" content="Download Veyndesk for Windows – Free Remote Desktop">
+<meta property="og:description" content="Install Veyndesk 0.5.0 on Windows: download, requirements (Windows 10 or 11, 64-bit (x64)), permissions and known limitations.">
+<meta property="og:url" content="https://veyndesk.github.io/download/windows/">
+<meta property="og:image" content="https://veyndesk.github.io/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Veyndesk", "item": "https://veyndesk.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Download", "item": "https://veyndesk.github.io/download/"}, {"@type": "ListItem", "position": 3, "name": "Windows", "item": "https://veyndesk.github.io/download/windows/"}]}</script>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/assets/logo.png" alt="" width="34" height="34">Veyndesk</a>
+    <nav>
+      <a class="hide-sm on" href="/download/">Download</a>
+<a class="hide-sm" href="/docs/getting-started/">Get started</a>
+<a class="hide-sm" href="/help/">Help</a>
+<a class="hide-sm" href="/security/">Security</a>
+<a class="hide-sm" href="/compare/anydesk/">Compare</a>
+      <a class="btn primary small" href="/download/">Download</a>
+    </nav>
+  </div>
+</header>
+<main>
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/download/">Download</a> / <span>Windows</span></nav>
+<article class="wrap prose">
+<h1>Veyndesk for Windows</h1>
+<p class="lead">Requirements: Windows 10 or 11, 64-bit (x64).</p>
+<p class="updated">Last updated 21 October 2026 · Veyndesk 0.5.0</p>
+<p><a class="btn primary" href="https://github.com/veyndesk/veyndesk/releases/latest">⬇ Download Veyndesk 0.5.0 for Windows</a></p>
+<table class="t"><thead><tr><th>File</th><th>Use it for</th></tr></thead><tbody><tr><td><code>Veyndesk_0.5.0_x64-setup.exe</code></td><td>Installer (recommended). Adds a firewall rule so direct connections work.</td></tr><tr><td><code>Veyndesk-windows-portable.zip</code></td><td>Portable: unzip and run Veyndesk.exe, no install.</td></tr></tbody></table>
+
+<h2>Install</h2>
+<ol>
+<li>Download <code>Veyndesk_0.5.0_x64-setup.exe</code> from the <a href="https://github.com/veyndesk/veyndesk/releases/latest">release page</a>.</li>
+<li>Run it. Windows may say <i>"Windows protected your PC"</i> because the installer isn't code-signed yet: click <b>More info → Run anyway</b>.
+  If <b>Smart App Control</b> blocks it completely, see <a href="/help/windows-warning/">Windows installer warning</a>.</li>
+<li>Veyndesk starts and shows your ID and password.</li>
+</ol>
+<h2>Permissions</h2>
+<p>The installer adds a Windows Firewall rule named "Veyndesk" so other computers can connect directly. The portable version doesn't, so Windows may ask once whether to allow it.</p>
+<h2>Limitations on Windows</h2>
+<ul><li>Installer not code-signed yet (warning on install).</li>
+<li>No background service yet: the Windows login screen, lock screen and UAC (admin) prompts can't be seen or controlled remotely.</li></ul>
+<h2>Uninstall</h2>
+<p>Settings → Apps → Veyndesk → Uninstall. Your ID and settings stay in <code>%APPDATA%\Veyndesk</code>; delete that folder to remove them too.</p>
+<p>Next: <a href="/docs/getting-started/">connect to another computer</a>.</p>
+</article>
+</main>
+<footer>
+  <div class="wrap">
+    <div>
+      <b>Veyndesk</b> · free, open-source remote desktop (AGPL-3.0)<br>
+      <span class="muted">Latest version 0.5.0. Not affiliated with AnyDesk, TeamViewer or RustDesk.</span>
+    </div>
+    <div class="flinks">
+      <a href="/download/">Download</a> <a href="/docs/getting-started/">Get started</a> <a href="/help/">Help</a>
+      <a href="/security/">Security</a> <a href="/privacy/">Privacy</a> <a href="/about/">About</a>
+      <a href="/changelog/">Changelog</a> <a href="https://github.com/veyndesk/veyndesk">GitHub</a>
+    </div>
+  </div>
+</footer>
+<script>
+(function(){var u=navigator.userAgent,o=/Mac/i.test(u)&&!/iPhone|iPad/.test(u)?'mac':/Linux|X11/i.test(u)&&!/Android/i.test(u)?'linux':/Win/i.test(u)?'win':null;
+if(!o)return;var n={win:'Windows',mac:'macOS',linux:'Linux'}[o];document.querySelectorAll('[data-dl-main]').forEach(function(b){b.textContent='⬇ Download for '+n;b.href='/download/'+{win:'windows',mac:'macos',linux:'linux'}[o]+'/';});
+var c=document.querySelector('.dl [data-os="'+o+'"]');if(c)c.classList.add('mine');})();
+</script>
+</body>
+</html>

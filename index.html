@@ -3,239 +3,155 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Veyndesk – Free Open-Source Remote Desktop | AnyDesk &amp; TeamViewer Alternative</title>
-<meta name="description" content="Veyndesk is free, open-source remote desktop software for Windows, macOS and Linux. A simple AnyDesk and TeamViewer alternative: connect to any PC with just an ID and password. Peer-to-peer, end-to-end encrypted, free for personal and business use.">
-<meta name="keywords" content="remote desktop, anydesk alternative, teamviewer alternative, rustdesk alternative, free remote desktop, open source remote desktop, remote access, remote support, remote control software, windows, mac, linux">
+<title>Veyndesk – Free Open-Source Remote Desktop | AnyDesk Alternative for Windows, Mac &amp; Linux</title>
+<meta name="description" content="Veyndesk is free, open-source remote desktop software for Windows, macOS and Linux. Connect with an ID and password, no account or server needed. See what&#x27;s tested and what isn&#x27;t.">
 <link rel="canonical" href="https://veyndesk.github.io/">
 <meta name="robots" content="index, follow">
-<meta name="google-site-verification" content="xDUnuce3X0_Feer7ykjTeq5xCcT5haQ61isWYwheov8" />
-<meta name="theme-color" content="#0d1117">
-<link rel="icon" type="image/png" href="https://github.com/veyndesk.png">
+<meta name="google-site-verification" content="xDUnuce3X0_Feer7ykjTeq5xCcT5haQ61isWYwheov8">
+<meta name="theme-color" content="#0b0f17">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="stylesheet" href="/assets/site.css">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Veyndesk">
-<meta property="og:title" content="Veyndesk – Free Open-Source Remote Desktop (AnyDesk Alternative)">
-<meta property="og:description" content="Connect to any PC with just an ID and password. Free, open source, end-to-end encrypted.">
+<meta property="og:title" content="Veyndesk – Free Open-Source Remote Desktop | AnyDesk Alternative for Windows, Mac &amp; Linux">
+<meta property="og:description" content="Veyndesk is free, open-source remote desktop software for Windows, macOS and Linux. Connect with an ID and password, no account or server needed. See what&#x27;s tested and what isn&#x27;t.">
 <meta property="og:url" content="https://veyndesk.github.io/">
-<meta property="og:image" content="https://github.com/veyndesk.png">
-<meta name="twitter:card" content="summary">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Veyndesk",
-  "applicationCategory": "UtilitiesApplication",
-  "applicationSubCategory": "Remote desktop software",
-  "operatingSystem": "Windows 10, Windows 11, macOS 10.15+, Linux",
-  "description": "Free, open-source remote desktop software. An AnyDesk and TeamViewer alternative: connect with just an ID and password.",
-  "url": "https://veyndesk.github.io/",
-  "downloadUrl": "https://github.com/veyndesk/veyndesk/releases/latest",
-  "license": "https://www.gnu.org/licenses/agpl-3.0.html",
-  "isAccessibleForFree": true,
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-  "sameAs": ["https://github.com/veyndesk/veyndesk"]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {"@type": "Question", "name": "Is Veyndesk free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Veyndesk is free and open source (AGPL-3.0), for personal and business use. There are no paid plans and no licence key."}},
-    {"@type": "Question", "name": "Is Veyndesk a good AnyDesk alternative?", "acceptedAnswer": {"@type": "Answer", "text": "Veyndesk works like AnyDesk: you open the app, share your ID and password, and your partner connects. Unlike AnyDesk it is open source and free for commercial use. Veyndesk runs on Windows, macOS and Linux; mobile apps are planned."}},
-    {"@type": "Question", "name": "Do I need an account or a server?", "acceptedAnswer": {"@type": "Answer", "text": "No. Install Veyndesk on both computers and connect with the ID and password. No account, no server setup and no port forwarding are needed."}},
-    {"@type": "Question", "name": "Does Veyndesk work on different networks?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Veyndesk connects the two computers directly (peer-to-peer) and automatically uses a relay when a network blocks direct connections, so it works on home Wi-Fi, office networks and mobile data."}},
-    {"@type": "Question", "name": "Does Veyndesk work on Mac and Linux?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Veyndesk is available for Windows, macOS (Apple Silicon and Intel, .dmg) and Linux (.deb and AppImage)."}},
-    {"@type": "Question", "name": "Is it secure?", "acceptedAnswer": {"@type": "Answer", "text": "Connections are end-to-end encrypted, the password is never sent over the network (challenge-response), and the person being connected to must press Accept before anyone can see the screen."}}
-  ]
-}
-</script>
-<style>
-  :root { --bg:#0b0f17; --bg2:#111827; --card:#151c28; --border:#263042; --text:#e8edf5; --muted:#9aa6b8;
-          --accent:#3b82f6; --accent2:#8b5cf6; --ok:#22c55e; --no:#ef4444; }
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
-  a { color: #93c5fd; }
-  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
-  header { position: sticky; top: 0; z-index: 5; background: rgba(11,15,23,.85); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); }
-  header .wrap { display: flex; align-items: center; gap: 12px; height: 64px; }
-  header img { width: 34px; height: 34px; border-radius: 8px; }
-  header .brand { font-weight: 800; font-size: 20px; color: var(--text); text-decoration: none; }
-  header nav { margin-left: auto; display: flex; gap: 20px; align-items: center; }
-  header nav a { color: var(--muted); text-decoration: none; font-size: 15px; }
-  header nav a:hover { color: var(--text); }
-  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 24px; border-radius: 12px; font-weight: 700; text-decoration: none; }
-  .btn.primary { background: linear-gradient(135deg, var(--accent), var(--accent2)); color: #fff; box-shadow: 0 10px 30px rgba(59,130,246,.35); }
-  .btn.ghost { border: 1px solid var(--border); color: var(--text); }
-  .btn.small { padding: 8px 14px; font-size: 14px; border-radius: 9px; }
-  .hero { padding: 90px 0 70px; text-align: center; background: radial-gradient(800px 380px at 50% -40px, rgba(99,102,241,.35), transparent); }
-  .hero img { width: 96px; height: 96px; border-radius: 22px; }
-  h1 { font-size: clamp(34px, 6vw, 58px); line-height: 1.1; margin: 22px 0 16px; letter-spacing: -1px; }
-  h1 span { background: linear-gradient(135deg, #60a5fa, #a78bfa); -webkit-background-clip: text; background-clip: text; color: transparent; }
-  .lead { color: var(--muted); font-size: clamp(17px, 2.2vw, 21px); max-width: 720px; margin: 0 auto 30px; }
-  .ctas { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-  .note { color: var(--muted); font-size: 14px; margin-top: 14px; }
-  section { padding: 70px 0; }
-  h2 { font-size: clamp(26px, 4vw, 36px); text-align: center; margin: 0 0 12px; letter-spacing: -.5px; }
-  .sub { text-align: center; color: var(--muted); margin: 0 auto 40px; max-width: 640px; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
-  .card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 24px; }
-  .card h3 { margin: 10px 0 6px; font-size: 19px; }
-  .card p { margin: 0; color: var(--muted); font-size: 15.5px; }
-  .ico { width: 42px; height: 42px; border-radius: 11px; display: grid; place-items: center; background: rgba(99,102,241,.16); font-size: 22px; }
-  .steps { counter-reset: s; }
-  .steps .card h3::before { counter-increment: s; content: counter(s); display: inline-grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: var(--accent); color: #fff; font-size: 15px; margin-right: 10px; }
-  .tablewrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 16px; }
-  table { width: 100%; border-collapse: collapse; min-width: 620px; background: var(--card); }
-  th, td { padding: 14px 16px; text-align: center; border-bottom: 1px solid var(--border); font-size: 15.5px; }
-  th:first-child, td:first-child { text-align: left; color: var(--muted); }
-  thead th { background: var(--bg2); font-size: 15px; }
-  thead th.us { color: #a5b4fc; }
-  tr:last-child td { border-bottom: 0; }
-  .y { color: var(--ok); font-weight: 700; } .n { color: var(--no); font-weight: 700; } .p { color: #f59e0b; }
-  details { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 18px 20px; margin-bottom: 12px; }
-  summary { cursor: pointer; font-weight: 650; font-size: 17px; }
-  details p { color: var(--muted); margin: 10px 0 0; }
-  .final { text-align: center; background: radial-gradient(700px 300px at 50% 120%, rgba(139,92,246,.3), transparent); }
-  footer { border-top: 1px solid var(--border); padding: 30px 0; color: var(--muted); font-size: 14px; }
-  footer .wrap { display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; }
-  .dl .card { text-align: center; }
-  .dl .card .os { font-size: 40px; }
-  .dl .card .btn { margin-top: 16px; }
-  .dl .card.mine { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
-  .dl .files { font-size: 13.5px; margin-top: 10px !important; }
-  @media (max-width: 640px) { header nav a.hide-sm { display: none; } .hero { padding: 60px 0 50px; } section { padding: 50px 0; } }
-</style>
+<meta property="og:image" content="https://veyndesk.github.io/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Veyndesk", "applicationCategory": "UtilitiesApplication", "applicationSubCategory": "Remote desktop software", "operatingSystem": "Windows 10, Windows 11, macOS 10.15 or later, Linux (x86-64, X11)", "softwareVersion": "0.5.0", "datePublished": "2026-10-21", "description": "Veyndesk is free, open-source remote desktop software for Windows, macOS and Linux. Like AnyDesk, each computer shows a 9-digit ID and a password; your partner enters them to see and control your screen. The source code is on GitHub under the AGPL-3.0 licence.", "url": "https://veyndesk.github.io/", "downloadUrl": "https://github.com/veyndesk/veyndesk/releases/latest", "license": "https://www.gnu.org/licenses/agpl-3.0.html", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "screenshot": "https://veyndesk.github.io/assets/img/01-main.png", "sameAs": ["https://github.com/veyndesk/veyndesk"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is Veyndesk?", "acceptedAnswer": {"@type": "Answer", "text": "Veyndesk is free, open-source remote desktop software for Windows, macOS and Linux. Like AnyDesk, each computer shows a 9-digit ID and a password; your partner enters them to see and control your screen. The source code is on GitHub under the AGPL-3.0 licence."}}, {"@type": "Question", "name": "Is Veyndesk free for business use?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Veyndesk is free for personal and commercial use, with no paid plans or licence keys. The AGPL-3.0 licence only adds obligations if you modify Veyndesk and distribute it or run it as a network service for others; using it unchanged has no such conditions."}}, {"@type": "Question", "name": "Does Veyndesk require a server or an account?", "acceptedAnswer": {"@type": "Answer", "text": "No. You don't need an account, a server or port forwarding. Veyndesk finds your partner through a public message service (ntfy.sh), connects the two computers directly when the network allows, and otherwise uses a relay through Cloudflare that the app sets up itself. You can optionally run your own server. How to connect."}}, {"@type": "Question", "name": "Does every connection need to be accepted?", "acceptedAnswer": {"@type": "Answer", "text": "Not always. With the one-time password, the remote computer shows an Accept / Deny prompt (on by default; it can be turned off in Settings). If you set a permanent password for unattended access, sessions using it start without a prompt. Details."}}, {"@type": "Question", "name": "Is Veyndesk end-to-end encrypted?", "acceptedAnswer": {"@type": "Answer", "text": "Direct (peer-to-peer) connections are end-to-end encrypted with DTLS. Relay connections are encrypted in transit (HTTPS) but pass through Cloudflare's servers, so they are not end-to-end encrypted. Connections made by typing an IP address on a local network are currently not encrypted. The password itself is never sent over the network. Security details."}}, {"@type": "Question", "name": "Does it work on different networks?", "acceptedAnswer": {"@type": "Answer", "text": "It is designed to: it tries a direct connection first and falls back to a relay. Some networks (strict company firewalls, networks that block ntfy.sh or Cloudflare) can still prevent it, and cross-network use has had limited testing so far. Troubleshooting."}}, {"@type": "Question", "name": "Does Veyndesk work on Mac and Linux?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, since version 0.5.0: a universal .dmg for macOS 10.15+ and .deb / AppImage packages for 64-bit Linux (X11 sessions). See Download for requirements and known limitations."}}]}</script>
 </head>
 <body>
 <header>
   <div class="wrap">
-    <img src="https://github.com/veyndesk.png" alt="Veyndesk logo">
-    <a class="brand" href="#">Veyndesk</a>
+    <a class="brand" href="/"><img src="/assets/logo.png" alt="" width="34" height="34">Veyndesk</a>
     <nav>
-      <a class="hide-sm" href="#download">Platforms</a>
-      <a class="hide-sm" href="#features">Features</a>
-      <a class="hide-sm" href="#compare">Compare</a>
-      <a class="hide-sm" href="#faq">FAQ</a>
-      <a class="btn primary small" href="https://github.com/veyndesk/veyndesk/releases/latest">Download</a>
+      <a class="hide-sm" href="/download/">Download</a>
+<a class="hide-sm" href="/docs/getting-started/">Get started</a>
+<a class="hide-sm" href="/help/">Help</a>
+<a class="hide-sm" href="/security/">Security</a>
+<a class="hide-sm" href="/compare/anydesk/">Compare</a>
+      <a class="btn primary small" href="/download/">Download</a>
     </nav>
   </div>
 </header>
-
 <main>
-  <section class="hero">
-    <div class="wrap">
-      <img src="https://github.com/veyndesk.png" alt="Veyndesk remote desktop app icon">
-      <h1>Free, open-source <span>remote desktop</span><br>for everyone</h1>
-      <p class="lead">Veyndesk is a simple <b>AnyDesk and TeamViewer alternative</b>. Open the app, share your ID and password,
-        and your partner can see and control your computer from anywhere. No account, no setup.</p>
-      <div class="ctas">
-        <a class="btn primary" id="dl-main" href="#download">⬇ Download Veyndesk</a>
-        <a class="btn ghost" href="https://github.com/veyndesk/veyndesk">★ View on GitHub</a>
-      </div>
-      <p class="note">Free for personal and business use · Windows · macOS · Linux · Open source (AGPL-3.0)</p>
-    </div>
-  </section>
 
-  <section id="download" class="dl">
-    <div class="wrap">
-      <h2>Download Veyndesk</h2>
-      <p class="sub">Free remote desktop for Windows, macOS and Linux. Pick your system.</p>
-      <div class="grid">
-        <div class="card" data-os="win"><div class="os">🪟</div><h3>Windows</h3><p>Windows 10 / 11 (64-bit)</p>
-          <a class="btn primary small" href="https://github.com/veyndesk/veyndesk/releases/latest">⬇ Download .exe</a><p class="files">Installer (.exe) or portable .zip</p></div>
-        <div class="card" data-os="mac"><div class="os">🍎</div><h3>macOS</h3><p>macOS 10.15+ · Apple Silicon &amp; Intel</p>
-          <a class="btn primary small" href="https://github.com/veyndesk/veyndesk/releases/latest">⬇ Download .dmg</a><p class="files">First run: right-click → Open</p></div>
-        <div class="card" data-os="linux"><div class="os">🐧</div><h3>Linux</h3><p>Ubuntu, Debian, Mint, Fedora…</p>
-          <a class="btn primary small" href="https://github.com/veyndesk/veyndesk/releases/latest">⬇ Download .deb / AppImage</a><p class="files">X11 session · Wayland coming soon</p></div>
-      </div>
-    </div>
-  </section>
 
-  <section id="how">
-    <div class="wrap">
-      <h2>Connect in 3 steps</h2>
-      <p class="sub">As easy as AnyDesk, without accounts or licence keys.</p>
-      <div class="grid steps">
-        <div class="card"><h3>Install Veyndesk</h3><p>Install it on both computers: Windows, Mac or Linux. The download is small (about 5–12 MB).</p></div>
-        <div class="card"><h3>Share ID &amp; password</h3><p>Each PC shows its own 9-digit ID and a one-time password.</p></div>
-        <div class="card"><h3>Connect &amp; accept</h3><p>Type the partner's ID, enter the password, and they click Accept. You're in.</p></div>
-      </div>
+<section class="hero">
+  <div class="wrap">
+    <img class="hero-logo" src="/assets/logo.png" alt="Veyndesk icon" width="96" height="96">
+    <h1>Free, open-source <span>remote desktop</span><br>for Windows, macOS and Linux</h1>
+    <p class="lead center">Veyndesk is a simple <b>AnyDesk and TeamViewer alternative</b>. Share your ID and password and your partner can see and control your computer.
+      No account and no server to set up.</p>
+    <div class="ctas">
+      <a class="btn primary" data-dl-main href="/download/">⬇ Download Veyndesk</a>
+      <a class="btn ghost" href="/docs/getting-started/">How it works</a>
     </div>
-  </section>
+    <p class="note center">Version 0.5.0 · Free for personal and business use · Open source (AGPL-3.0)</p>
+  </div>
+</section>
 
-  <section id="features">
-    <div class="wrap">
-      <h2>Everything you need for remote support</h2>
-      <p class="sub">Fast, private remote access software, built in Rust.</p>
-      <div class="grid">
-        <div class="card"><div class="ico">⚡</div><h3>Direct peer-to-peer</h3><p>Computers connect directly over WebRTC for low latency, with an automatic relay when a network blocks it.</p></div>
-        <div class="card"><div class="ico">🌍</div><h3>Works on any network</h3><p>Home Wi-Fi, office networks, mobile data. No port forwarding and no server to set up.</p></div>
-        <div class="card"><div class="ico">🔒</div><h3>End-to-end encrypted</h3><p>Encrypted connections. The password is never sent over the network, and you accept every session.</p></div>
-        <div class="card"><div class="ico">🖥️</div><h3>Sharp &amp; smooth</h3><p>Adaptive quality sends only the parts of the screen that changed, then sharpens text when the screen is still.</p></div>
-        <div class="card"><div class="ico">⌨️</div><h3>Full control</h3><p>Mouse, keyboard, clipboard sync, special keys and multi-monitor support.</p></div>
-        <div class="card"><div class="ico">🔓</div><h3>Open source</h3><p>Every line of code is on GitHub. Self-host your own server and admin panel if you like.</p></div>
-      </div>
-    </div>
-  </section>
+<section>
+  <div class="wrap">
+    <h2>What is Veyndesk?</h2>
+    <p class="sub">Veyndesk is free, open-source remote desktop software for Windows, macOS and Linux. Like AnyDesk, each computer shows a 9-digit ID and a password; your partner enters them to see and control your screen. The source code is on <a href="https://github.com/veyndesk/veyndesk">GitHub</a> under the AGPL-3.0 licence.</p>
+    <figure><img src="/assets/img/01-main.png" alt="Veyndesk main window showing this computer&#x27;s ID and password and a field for the partner&#x27;s ID" loading="lazy"><figcaption>The Veyndesk window: your ID and password on the left, your partner's ID on the right.</figcaption></figure>
+  </div>
+</section>
 
-  <section id="compare">
-    <div class="wrap">
-      <h2>Veyndesk vs AnyDesk vs TeamViewer vs RustDesk</h2>
-      <p class="sub">A free remote desktop alternative that you can use at work too.</p>
-      <div class="tablewrap">
-        <table>
-          <thead><tr><th></th><th class="us">Veyndesk</th><th>AnyDesk</th><th>TeamViewer</th><th>RustDesk</th></tr></thead>
-          <tbody>
-            <tr><td>Open source</td><td class="y">Yes</td><td class="n">No</td><td class="n">No</td><td class="y">Yes</td></tr>
-            <tr><td>Free for business use</td><td class="y">Yes</td><td class="n">Paid licence</td><td class="n">Paid licence</td><td class="y">Yes</td></tr>
-            <tr><td>Connect with just ID + password</td><td class="y">Yes</td><td class="y">Yes</td><td class="y">Yes</td><td class="y">Yes</td></tr>
-            <tr><td>Works without setting up a server</td><td class="y">Yes</td><td class="y">Yes</td><td class="y">Yes</td><td class="y">Yes</td></tr>
-            <tr><td>Built-in web admin panel (free)</td><td class="y">Yes</td><td class="n">No</td><td class="n">No</td><td class="p">Pro (paid)</td></tr>
-            <tr><td>Platforms</td><td>Win, Mac, Linux</td><td>Win, Mac, Linux, mobile</td><td>Win, Mac, Linux, mobile</td><td>Win, Mac, Linux, mobile</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="note" style="text-align:center">AnyDesk and TeamViewer are trademarks of their owners. Veyndesk is an independent project and is not affiliated with them.</p>
+<section id="how">
+  <div class="wrap">
+    <h2>Connect in 3 steps</h2>
+    <div class="grid steps">
+      <div class="card"><h3>Install on both computers</h3><p>Windows, macOS or Linux. Each computer shows a 9-digit ID and a one-time password.</p></div>
+      <div class="card"><h3>Enter the partner's ID</h3><p>Type their ID, click Connect, and enter the password they read out to you.</p></div>
+      <div class="card"><h3>They click Accept</h3><p>The other person sees who is connecting and chooses Accept or Deny. <a href="/docs/getting-started/">Full guide with screenshots</a></p></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="faq">
-    <div class="wrap" style="max-width:820px">
-      <h2>Frequently asked questions</h2>
-      <p class="sub">About Veyndesk, the free open-source remote desktop.</p>
-      <details open><summary>Is Veyndesk free?</summary><p>Yes. Veyndesk is free and open source (AGPL-3.0), for personal and business use. There are no paid plans and no licence key.</p></details>
-      <details><summary>Is Veyndesk a good AnyDesk alternative?</summary><p>Veyndesk works like AnyDesk: you open the app, share your ID and password, and your partner connects. Unlike AnyDesk it is open source and free for commercial use. Veyndesk runs on Windows, macOS and Linux; mobile apps are planned.</p></details>
-      <details><summary>Do I need an account or a server?</summary><p>No. Install Veyndesk on both computers and connect with the ID and password. No account, no server setup and no port forwarding are needed.</p></details>
-      <details><summary>Does Veyndesk work on different networks?</summary><p>Yes. Veyndesk connects the two computers directly (peer-to-peer) and automatically uses a relay when a network blocks direct connections, so it works on home Wi-Fi, office networks and mobile data.</p></details>
-      <details><summary>Is it secure?</summary><p>Connections are end-to-end encrypted, the password is never sent over the network (challenge-response), and the person being connected to must press Accept before anyone can see the screen.</p></details>
-      <details><summary>Does Veyndesk work on Mac and Linux?</summary><p>Yes. Download the .dmg for macOS (Apple Silicon and Intel) or the .deb / AppImage for Linux. On a Mac, right-click the app and choose Open the first time, then allow Screen Recording and Accessibility in System Settings → Privacy &amp; Security. On Linux, use an X11 session (for example "Ubuntu on Xorg"); Wayland support is planned.</p></details>
-      <details><summary>Windows shows a warning when I install it. Why?</summary><p>Veyndesk is new, and its installer isn't code-signed yet, so Windows doesn't recognise the publisher. Code signing is in progress. You can check the source code on GitHub.</p></details>
+<section id="features">
+  <div class="wrap">
+    <h2>What it does today</h2>
+    <p class="sub">Features in version 0.5.0, and what's not there yet.</p>
+    <div class="grid">
+      <div class="card"><div class="ico">⚡</div><h3>Direct connection, relay fallback</h3><p>Connects the two computers directly (WebRTC). If that fails within about 7 seconds, it uses a relay through Cloudflare.</p></div>
+      <div class="card"><div class="ico">🔑</div><h3>Password never sent</h3><p>A challenge–response check proves the password without sending it. 8 wrong attempts in 5 minutes block further tries for a while.</p></div>
+      <div class="card"><div class="ico">✋</div><h3>Accept / Deny prompt</h3><p>One-time-password sessions ask the remote person first. Permanent-password (unattended) sessions don't. <a href="/security/#unattended">Learn more</a></p></div>
+      <div class="card"><div class="ico">🖥️</div><h3>Screen, mouse and keyboard</h3><p>Adaptive quality, sharper text when the screen is still, multi-monitor, clipboard text sync.</p></div>
+      <div class="card"><div class="ico">🏠</div><h3>Works on the local network</h3><p>Computers on the same network find each other automatically, and you can also connect by IP address.</p></div>
+      <div class="card"><div class="ico">🔓</div><h3>Open source</h3><p>All code is on GitHub. You can run your own server with a web admin panel and audit log.</p></div>
     </div>
-  </section>
+    <h3 class="mt">Known limitations</h3>
+    <ul>
+<li><b>No file transfer, chat, audio or session recording yet.</b> Clipboard text sync works.</li>
+<li><b>No mobile apps</b> (Android/iOS) yet.</li>
+<li><b>Linux:</b> X11 sessions only. Wayland is not supported yet.</li>
+<li><b>macOS:</b> the app is not notarized yet, and it has not yet been tested by the maintainer on a physical Mac (it is built and packaged automatically).</li>
+<li><b>Windows:</b> the installer is not code-signed yet, so Windows shows a warning. There is no background service yet, so the login screen and UAC prompts can't be controlled.</li>
+<li><b>Internet connections depend on public services</b> (ntfy.sh for finding the partner, Cloudflare for the relay). A network that blocks them can only use Veyndesk on the local network.</li>
+</ul>
+  </div>
+</section>
 
-  <section class="final">
-    <div class="wrap">
-      <h2>Try Veyndesk today</h2>
-      <p class="sub">Free remote desktop software for Windows, macOS and Linux. Download, install, connect.</p>
-      <div class="ctas">
-        <a class="btn primary" href="#download">⬇ Download Veyndesk</a>
-        <a class="btn ghost" href="https://github.com/veyndesk/veyndesk">★ Star on GitHub</a>
-      </div>
-    </div>
-  </section>
+<section id="tested">
+  <div class="wrap">
+    <h2>What has been tested</h2>
+    <p class="sub">Veyndesk is new. This is what has actually been tried so far.</p>
+    <table class="t">
+<thead><tr><th>Scenario</th><th>Status</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td>Two Windows PCs on the same network</td><td class="y">Tested</td><td>Connect by ID or IP, accept, control.</td></tr>
+<tr><td>Two Linux apps, connect by ID (direct P2P)</td><td class="y">Tested</td><td>ID → password → Accept → live session, X11 (the screenshots in the <a href="/docs/getting-started/">guide</a>), 21 October 2026.</td></tr>
+<tr><td>Linux screen capture and mouse/keyboard control</td><td class="y">Tested</td><td>X11 only.</td></tr>
+<tr><td>Computers on different networks (home ↔ office, mobile data)</td><td class="p">Limited testing</td><td>Uses direct P2P, then the relay. Some networks block both; see <a href="/help/connection-failed/">Connection failed</a>.</td></tr>
+<tr><td>macOS (Apple Silicon and Intel)</td><td class="p">Builds, not yet tested on a real Mac</td><td>Please <a href="https://github.com/veyndesk/veyndesk/issues">report</a> how it works for you.</td></tr>
+<tr><td>Linux Wayland</td><td class="n">Not supported</td><td>Use an X11 session.</td></tr>
+</tbody></table>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap narrow">
+    <h2>Questions and answers</h2>
+    <details open><summary>What is Veyndesk?</summary><p>Veyndesk is free, open-source remote desktop software for Windows, macOS and Linux. Like AnyDesk, each computer shows a 9-digit ID and a password; your partner enters them to see and control your screen. The source code is on <a href="https://github.com/veyndesk/veyndesk">GitHub</a> under the AGPL-3.0 licence.</p></details>
+<details><summary>Is Veyndesk free for business use?</summary><p>Yes. Veyndesk is free for personal and commercial use, with no paid plans or licence keys. The AGPL-3.0 licence only adds obligations if you modify Veyndesk and distribute it or run it as a network service for others; using it unchanged has no such conditions.</p></details>
+<details><summary>Does Veyndesk require a server or an account?</summary><p>No. You don't need an account, a server or port forwarding. Veyndesk finds your partner through a public message service (ntfy.sh), connects the two computers directly when the network allows, and otherwise uses a relay through Cloudflare that the app sets up itself. You can optionally run your own server. <a href="/docs/getting-started/">How to connect</a>.</p></details>
+<details><summary>Does every connection need to be accepted?</summary><p>Not always. With the one-time password, the remote computer shows an Accept / Deny prompt (on by default; it can be turned off in Settings). If you set a <b>permanent password</b> for unattended access, sessions using it start <b>without</b> a prompt. <a href="/security/#unattended">Details</a>.</p></details>
+<details><summary>Is Veyndesk end-to-end encrypted?</summary><p>Direct (peer-to-peer) connections are end-to-end encrypted with DTLS. Relay connections are encrypted in transit (HTTPS) but pass through Cloudflare's servers, so they are not end-to-end encrypted. Connections made by typing an IP address on a local network are currently not encrypted. The password itself is never sent over the network. <a href="/security/">Security details</a>.</p></details>
+<details><summary>Does it work on different networks?</summary><p>It is designed to: it tries a direct connection first and falls back to a relay. Some networks (strict company firewalls, networks that block ntfy.sh or Cloudflare) can still prevent it, and cross-network use has had limited testing so far. <a href="/help/connection-failed/">Troubleshooting</a>.</p></details>
+<details><summary>Does Veyndesk work on Mac and Linux?</summary><p>Yes, since version 0.5.0: a universal .dmg for macOS 10.15+ and .deb / AppImage packages for 64-bit Linux (X11 sessions). See <a href="/download/">Download</a> for requirements and known limitations.</p></details>
+    <p class="center"><a href="/help/">More help</a> · <a href="/compare/anydesk/">Veyndesk vs AnyDesk</a> · <a href="/compare/rustdesk/">Veyndesk vs RustDesk</a></p>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap center">
+    <h2>Try Veyndesk</h2>
+    <p class="sub">Free remote desktop for Windows, macOS and Linux.</p>
+    <div class="ctas"><a class="btn primary" data-dl-main href="/download/">⬇ Download Veyndesk</a><a class="btn ghost" href="https://github.com/veyndesk/veyndesk">★ Star on GitHub</a></div>
+  </div>
+</section>
+
 </main>
-
 <footer>
   <div class="wrap">
-    <span>© 2026 Veyndesk · Open source under AGPL-3.0</span>
-    <span><a href="https://github.com/veyndesk/veyndesk">GitHub</a> · <a href="https://github.com/veyndesk/veyndesk#privacy-policy">Privacy</a> · <a href="https://github.com/veyndesk/veyndesk/issues">Support</a></span>
+    <div>
+      <b>Veyndesk</b> · free, open-source remote desktop (AGPL-3.0)<br>
+      <span class="muted">Latest version 0.5.0. Not affiliated with AnyDesk, TeamViewer or RustDesk.</span>
+    </div>
+    <div class="flinks">
+      <a href="/download/">Download</a> <a href="/docs/getting-started/">Get started</a> <a href="/help/">Help</a>
+      <a href="/security/">Security</a> <a href="/privacy/">Privacy</a> <a href="/about/">About</a>
+      <a href="/changelog/">Changelog</a> <a href="https://github.com/veyndesk/veyndesk">GitHub</a>
+    </div>
   </div>
 </footer>
 <script>
 (function(){var u=navigator.userAgent,o=/Mac/i.test(u)&&!/iPhone|iPad/.test(u)?'mac':/Linux|X11/i.test(u)&&!/Android/i.test(u)?'linux':/Win/i.test(u)?'win':null;
-if(!o)return;var n={win:'Windows',mac:'macOS',linux:'Linux'}[o],b=document.getElementById('dl-main');
-if(b)b.textContent='⬇ Download for '+n;var c=document.querySelector('.dl [data-os="'+o+'"]');if(c)c.classList.add('mine');})();
+if(!o)return;var n={win:'Windows',mac:'macOS',linux:'Linux'}[o];document.querySelectorAll('[data-dl-main]').forEach(function(b){b.textContent='⬇ Download for '+n;b.href='/download/'+{win:'windows',mac:'macos',linux:'linux'}[o]+'/';});
+var c=document.querySelector('.dl [data-os="'+o+'"]');if(c)c.classList.add('mine');})();
 </script>
 </body>
 </html>

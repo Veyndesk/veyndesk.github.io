@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Veyndesk Security: Encryption, Passwords and Unattended Access</title>
+<meta name="description" content="How Veyndesk connections are made and protected: end-to-end encrypted direct connections, relay through Cloudflare, password handling, the Accept prompt and unattended access.">
+<link rel="canonical" href="https://veyndesk.github.io/security/">
+<meta name="robots" content="index, follow">
+
+<meta name="theme-color" content="#0b0f17">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="stylesheet" href="/assets/site.css">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Veyndesk">
+<meta property="og:title" content="Veyndesk Security: Encryption, Passwords and Unattended Access">
+<meta property="og:description" content="How Veyndesk connections are made and protected: end-to-end encrypted direct connections, relay through Cloudflare, password handling, the Accept prompt and unattended access.">
+<meta property="og:url" content="https://veyndesk.github.io/security/">
+<meta property="og:image" content="https://veyndesk.github.io/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Veyndesk", "item": "https://veyndesk.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Security", "item": "https://veyndesk.github.io/security/"}]}</script>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/assets/logo.png" alt="" width="34" height="34">Veyndesk</a>
+    <nav>
+      <a class="hide-sm" href="/download/">Download</a>
+<a class="hide-sm" href="/docs/getting-started/">Get started</a>
+<a class="hide-sm" href="/help/">Help</a>
+<a class="hide-sm on" href="/security/">Security</a>
+<a class="hide-sm" href="/compare/anydesk/">Compare</a>
+      <a class="btn primary small" href="/download/">Download</a>
+    </nav>
+  </div>
+</header>
+<main>
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <span>Security</span></nav>
+<article class="wrap prose">
+<h1>Security</h1>
+<p class="lead">Exactly how Veyndesk connects and what is and isn't encrypted, including current gaps.</p>
+<p class="updated">Last updated 21 October 2026 · Veyndesk 0.5.0</p>
+
+<h2 id="summary">Summary</h2>
+<ul>
+<li>The <b>password is never sent</b> over the network. The remote computer sends a random challenge and only a hash proving the password comes back.</li>
+<li><b>Direct connections are end-to-end encrypted</b> (WebRTC DTLS).</li>
+<li><b>Relay connections are encrypted in transit but not end-to-end</b>: they pass through Cloudflare's servers.</li>
+<li><b>Connections by IP address on a local network are not encrypted yet.</b></li>
+<li>One-time-password sessions show an <b>Accept / Deny</b> prompt by default. <b>Permanent-password sessions don't.</b></li>
+</ul>
+
+<h2 id="encryption">How a connection is made, and how it's protected</h2>
+<table class="t">
+<thead><tr><th>Connection</th><th>When it's used</th><th>Encryption</th></tr></thead>
+<tbody>
+<tr><td><b>Direct (P2P)</b></td><td>First choice when you connect by ID. The two apps exchange connection details through ntfy.sh, then connect directly using STUN (Google and Cloudflare servers).</td><td class="y">End-to-end (DTLS). Only the two computers can read the session.</td></tr>
+<tr><td><b>Relay</b></td><td>If a direct connection isn't ready within about 7 seconds. The shared computer runs a Cloudflare "quick tunnel" (cloudflared) and the viewer connects to it over HTTPS.</td><td class="p">HTTPS/TLS in transit. Cloudflare's edge servers handle the traffic unencrypted inside their network, so this is <b>not end-to-end</b>.</td></tr>
+<tr><td><b>Local network / IP address</b></td><td>When you type an IP address, or as a fallback when the partner was found on your local network.</td><td class="n">Not encrypted yet (plain WebSocket). Avoid on untrusted networks.</td></tr>
+</tbody></table>
+<p>Adding end-to-end encryption to the relay and local connections (a key exchange between the two apps) is the top security item on the <a href="https://github.com/veyndesk/veyndesk/blob/main/docs/ROADMAP.md">roadmap</a>.</p>
+
+<h2 id="password">Passwords</h2>
+<ul>
+<li><b>One-time password:</b> 8 random letters and digits, made new every time the app starts or when you click <b>New</b>.</li>
+<li><b>Permanent password</b> (Settings, at least 8 characters): stored only as a salted SHA-256 hash on your computer.</li>
+<li>Login is challenge–response: <code>proof = SHA-256(SHA-256(salt:password) : random nonce)</code>, so the password and its hash are never sent.</li>
+<li><b>Lockout:</b> after 8 wrong passwords within 5 minutes, further attempts are rejected for a few minutes.</li>
+</ul>
+
+<h2 id="unattended">Accept prompt and unattended access</h2>
+<table class="t">
+<thead><tr><th>Partner uses…</th><th>Accept / Deny prompt?</th></tr></thead>
+<tbody>
+<tr><td>One-time password, "ask before accepting" on (default)</td><td class="y">Yes. No answer within ~45 s = refused.</td></tr>
+<tr><td>One-time password, "ask before accepting" turned off</td><td class="n">No</td></tr>
+<tr><td>Permanent password</td><td class="n">No. This is unattended access.</td></tr>
+</tbody></table>
+<p>Anyone who knows your permanent password and your ID can connect <b>without you being asked</b>, whenever Veyndesk is running. Use a long, unique password,
+only set one on computers you need to reach unattended, and remove it in Settings when you no longer need it. The app always shows
+<b>Your screen is being shared</b> while a session is active, and <b>Disconnect all</b> ends every session.</p>
+
+<h2 id="services">External services</h2>
+<p>Veyndesk has no accounts and no Veyndesk-run servers. To connect over the internet it uses public services; see the <a href="/privacy/">privacy page</a> for exactly what is sent to each.</p>
+
+<h2 id="builds">Builds</h2>
+<p>Every download is built by GitHub Actions from the public source code; the build workflow is in the repository. Installers are not code-signed yet.</p>
+
+<h2 id="report">Report a security issue</h2>
+<p>Please report vulnerabilities <b>privately</b> using GitHub's <a href="https://github.com/veyndesk/veyndesk/security/advisories/new">Report a vulnerability</a> form (Security tab of the repository),
+not in a public issue. Include the version, operating system and steps to reproduce. You'll get a reply on the advisory.</p>
+
+</article>
+</main>
+<footer>
+  <div class="wrap">
+    <div>
+      <b>Veyndesk</b> · free, open-source remote desktop (AGPL-3.0)<br>
+      <span class="muted">Latest version 0.5.0. Not affiliated with AnyDesk, TeamViewer or RustDesk.</span>
+    </div>
+    <div class="flinks">
+      <a href="/download/">Download</a> <a href="/docs/getting-started/">Get started</a> <a href="/help/">Help</a>
+      <a href="/security/">Security</a> <a href="/privacy/">Privacy</a> <a href="/about/">About</a>
+      <a href="/changelog/">Changelog</a> <a href="https://github.com/veyndesk/veyndesk">GitHub</a>
+    </div>
+  </div>
+</footer>
+<script>
+(function(){var u=navigator.userAgent,o=/Mac/i.test(u)&&!/iPhone|iPad/.test(u)?'mac':/Linux|X11/i.test(u)&&!/Android/i.test(u)?'linux':/Win/i.test(u)?'win':null;
+if(!o)return;var n={win:'Windows',mac:'macOS',linux:'Linux'}[o];document.querySelectorAll('[data-dl-main]').forEach(function(b){b.textContent='⬇ Download for '+n;b.href='/download/'+{win:'windows',mac:'macos',linux:'linux'}[o]+'/';});
+var c=document.querySelector('.dl [data-os="'+o+'"]');if(c)c.classList.add('mine');})();
+</script>
+</body>
+</html>

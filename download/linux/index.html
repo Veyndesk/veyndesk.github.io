@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Download Veyndesk for Linux – Free Remote Desktop</title>
+<meta name="description" content="Install Veyndesk 0.5.0 on Linux: download, requirements (64-bit (x86-64) Linux with an X11 session), permissions and known limitations.">
+<link rel="canonical" href="https://veyndesk.github.io/download/linux/">
+<meta name="robots" content="index, follow">
+
+<meta name="theme-color" content="#0b0f17">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="stylesheet" href="/assets/site.css">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Veyndesk">
+<meta property="og:title" content="Download Veyndesk for Linux – Free Remote Desktop">
+<meta property="og:description" content="Install Veyndesk 0.5.0 on Linux: download, requirements (64-bit (x86-64) Linux with an X11 session), permissions and known limitations.">
+<meta property="og:url" content="https://veyndesk.github.io/download/linux/">
+<meta property="og:image" content="https://veyndesk.github.io/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Veyndesk", "item": "https://veyndesk.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Download", "item": "https://veyndesk.github.io/download/"}, {"@type": "ListItem", "position": 3, "name": "Linux", "item": "https://veyndesk.github.io/download/linux/"}]}</script>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/assets/logo.png" alt="" width="34" height="34">Veyndesk</a>
+    <nav>
+      <a class="hide-sm on" href="/download/">Download</a>
+<a class="hide-sm" href="/docs/getting-started/">Get started</a>
+<a class="hide-sm" href="/help/">Help</a>
+<a class="hide-sm" href="/security/">Security</a>
+<a class="hide-sm" href="/compare/anydesk/">Compare</a>
+      <a class="btn primary small" href="/download/">Download</a>
+    </nav>
+  </div>
+</header>
+<main>
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/download/">Download</a> / <span>Linux</span></nav>
+<article class="wrap prose">
+<h1>Veyndesk for Linux</h1>
+<p class="lead">Requirements: 64-bit (x86-64) Linux with an X11 session.</p>
+<p class="updated">Last updated 21 October 2026 · Veyndesk 0.5.0</p>
+<p><a class="btn primary" href="https://github.com/veyndesk/veyndesk/releases/latest">⬇ Download Veyndesk 0.5.0 for Linux</a></p>
+<table class="t"><thead><tr><th>File</th><th>Use it for</th></tr></thead><tbody><tr><td><code>Veyndesk_0.5.0_amd64.deb</code></td><td>For Ubuntu, Debian, Linux Mint and other Debian-based systems.</td></tr><tr><td><code>Veyndesk_0.5.0_amd64.AppImage</code></td><td>For most other distributions: make it executable and run it.</td></tr></tbody></table>
+
+<h2>Install</h2>
+<p><b>Ubuntu, Debian, Mint:</b> download <code>Veyndesk_0.5.0_amd64.deb</code>, then:</p>
+<pre>sudo apt install ./Veyndesk_0.5.0_amd64.deb</pre>
+<p><b>Other distributions:</b> download the AppImage, then:</p>
+<pre>chmod +x Veyndesk_0.5.0_amd64.AppImage
+./Veyndesk_0.5.0_amd64.AppImage</pre>
+<h2>X11 session required</h2>
+<p>Veyndesk can currently share and control the screen only in an <b>X11</b> session. Many distributions (Ubuntu 22.04+, Fedora) use <b>Wayland</b> by default.
+On Ubuntu, log out, click the gear icon on the login screen and choose <b>"Ubuntu on Xorg"</b>. More: <a href="/help/linux-wayland/">Linux X11 vs Wayland</a>.</p>
+<h2>Limitations on Linux</h2>
+<ul><li>Wayland not supported yet.</li><li>64-bit x86 only (no ARM build yet).</li></ul>
+<h2>Uninstall</h2>
+<p><code>sudo apt remove veyndesk</code> (or delete the AppImage). Settings are in <code>~/.config/Veyndesk</code>.</p>
+<p>Next: <a href="/docs/getting-started/">connect to another computer</a>.</p>
+</article>
+</main>
+<footer>
+  <div class="wrap">
+    <div>
+      <b>Veyndesk</b> · free, open-source remote desktop (AGPL-3.0)<br>
+      <span class="muted">Latest version 0.5.0. Not affiliated with AnyDesk, TeamViewer or RustDesk.</span>
+    </div>
+    <div class="flinks">
+      <a href="/download/">Download</a> <a href="/docs/getting-started/">Get started</a> <a href="/help/">Help</a>
+      <a href="/security/">Security</a> <a href="/privacy/">Privacy</a> <a href="/about/">About</a>
+      <a href="/changelog/">Changelog</a> <a href="https://github.com/veyndesk/veyndesk">GitHub</a>
+    </div>
+  </div>
+</footer>
+<script>
+(function(){var u=navigator.userAgent,o=/Mac/i.test(u)&&!/iPhone|iPad/.test(u)?'mac':/Linux|X11/i.test(u)&&!/Android/i.test(u)?'linux':/Win/i.test(u)?'win':null;
+if(!o)return;var n={win:'Windows',mac:'macOS',linux:'Linux'}[o];document.querySelectorAll('[data-dl-main]').forEach(function(b){b.textContent='⬇ Download for '+n;b.href='/download/'+{win:'windows',mac:'macos',linux:'linux'}[o]+'/';});
+var c=document.querySelector('.dl [data-os="'+o+'"]');if(c)c.classList.add('mine');})();
+</script>
+</body>
+</html>
