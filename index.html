@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Veyndesk – Free Open-Source Remote Desktop | AnyDesk &amp; TeamViewer Alternative</title>
+<meta name="description" content="Veyndesk is free, open-source remote desktop software for Windows. A simple AnyDesk and TeamViewer alternative: connect to any PC with just an ID and password. Peer-to-peer, end-to-end encrypted, free for personal and business use.">
+<meta name="keywords" content="remote desktop, anydesk alternative, teamviewer alternative, rustdesk alternative, free remote desktop, open source remote desktop, remote access, remote support, remote control software, windows">
+<link rel="canonical" href="https://veyndesk.github.io/">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0d1117">
+<link rel="icon" type="image/png" href="https://github.com/veyndesk.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Veyndesk">
+<meta property="og:title" content="Veyndesk – Free Open-Source Remote Desktop (AnyDesk Alternative)">
+<meta property="og:description" content="Connect to any PC with just an ID and password. Free, open source, end-to-end encrypted.">
+<meta property="og:url" content="https://veyndesk.github.io/">
+<meta property="og:image" content="https://github.com/veyndesk.png">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Veyndesk",
+  "applicationCategory": "UtilitiesApplication",
+  "applicationSubCategory": "Remote desktop software",
+  "operatingSystem": "Windows 10, Windows 11",
+  "description": "Free, open-source remote desktop software. An AnyDesk and TeamViewer alternative: connect with just an ID and password.",
+  "url": "https://veyndesk.github.io/",
+  "downloadUrl": "https://github.com/veyndesk/veyndesk/releases/latest",
+  "license": "https://www.gnu.org/licenses/agpl-3.0.html",
+  "isAccessibleForFree": true,
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "sameAs": ["https://github.com/veyndesk/veyndesk"]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Is Veyndesk free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Veyndesk is free and open source (AGPL-3.0), for personal and business use. There are no paid plans and no licence key."}},
+    {"@type": "Question", "name": "Is Veyndesk a good AnyDesk alternative?", "acceptedAnswer": {"@type": "Answer", "text": "Veyndesk works like AnyDesk: you open the app, share your ID and password, and your partner connects. Unlike AnyDesk it is open source and free for commercial use. AnyDesk currently supports more platforms; Veyndesk is Windows-only for now."}},
+    {"@type": "Question", "name": "Do I need an account or a server?", "acceptedAnswer": {"@type": "Answer", "text": "No. Install Veyndesk on both computers and connect with the ID and password. No account, no server setup and no port forwarding are needed."}},
+    {"@type": "Question", "name": "Does Veyndesk work on different networks?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Veyndesk connects the two computers directly (peer-to-peer) and automatically uses a relay when a network blocks direct connections, so it works on home Wi-Fi, office networks and mobile data."}},
+    {"@type": "Question", "name": "Is it secure?", "acceptedAnswer": {"@type": "Answer", "text": "Connections are end-to-end encrypted, the password is never sent over the network (challenge-response), and the person being connected to must press Accept before anyone can see the screen."}}
+  ]
+}
+</script>
+<style>
+  :root { --bg:#0b0f17; --bg2:#111827; --card:#151c28; --border:#263042; --text:#e8edf5; --muted:#9aa6b8;
+          --accent:#3b82f6; --accent2:#8b5cf6; --ok:#22c55e; --no:#ef4444; }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  a { color: #93c5fd; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+  header { position: sticky; top: 0; z-index: 5; background: rgba(11,15,23,.85); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); }
+  header .wrap { display: flex; align-items: center; gap: 12px; height: 64px; }
+  header img { width: 34px; height: 34px; border-radius: 8px; }
+  header .brand { font-weight: 800; font-size: 20px; color: var(--text); text-decoration: none; }
+  header nav { margin-left: auto; display: flex; gap: 20px; align-items: center; }
+  header nav a { color: var(--muted); text-decoration: none; font-size: 15px; }
+  header nav a:hover { color: var(--text); }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 24px; border-radius: 12px; font-weight: 700; text-decoration: none; }
+  .btn.primary { background: linear-gradient(135deg, var(--accent), var(--accent2)); color: #fff; box-shadow: 0 10px 30px rgba(59,130,246,.35); }
+  .btn.ghost { border: 1px solid var(--border); color: var(--text); }
+  .btn.small { padding: 8px 14px; font-size: 14px; border-radius: 9px; }
+  .hero { padding: 90px 0 70px; text-align: center; background: radial-gradient(800px 380px at 50% -40px, rgba(99,102,241,.35), transparent); }
+  .hero img { width: 96px; height: 96px; border-radius: 22px; }
+  h1 { font-size: clamp(34px, 6vw, 58px); line-height: 1.1; margin: 22px 0 16px; letter-spacing: -1px; }
+  h1 span { background: linear-gradient(135deg, #60a5fa, #a78bfa); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .lead { color: var(--muted); font-size: clamp(17px, 2.2vw, 21px); max-width: 720px; margin: 0 auto 30px; }
+  .ctas { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .note { color: var(--muted); font-size: 14px; margin-top: 14px; }
+  section { padding: 70px 0; }
+  h2 { font-size: clamp(26px, 4vw, 36px); text-align: center; margin: 0 0 12px; letter-spacing: -.5px; }
+  .sub { text-align: center; color: var(--muted); margin: 0 auto 40px; max-width: 640px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 24px; }
+  .card h3 { margin: 10px 0 6px; font-size: 19px; }
+  .card p { margin: 0; color: var(--muted); font-size: 15.5px; }
+  .ico { width: 42px; height: 42px; border-radius: 11px; display: grid; place-items: center; background: rgba(99,102,241,.16); font-size: 22px; }
+  .steps { counter-reset: s; }
+  .steps .card h3::before { counter-increment: s; content: counter(s); display: inline-grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: var(--accent); color: #fff; font-size: 15px; margin-right: 10px; }
+  .tablewrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 16px; }
+  table { width: 100%; border-collapse: collapse; min-width: 620px; background: var(--card); }
+  th, td { padding: 14px 16px; text-align: center; border-bottom: 1px solid var(--border); font-size: 15.5px; }
+  th:first-child, td:first-child { text-align: left; color: var(--muted); }
+  thead th { background: var(--bg2); font-size: 15px; }
+  thead th.us { color: #a5b4fc; }
+  tr:last-child td { border-bottom: 0; }
+  .y { color: var(--ok); font-weight: 700; } .n { color: var(--no); font-weight: 700; } .p { color: #f59e0b; }
+  details { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 18px 20px; margin-bottom: 12px; }
+  summary { cursor: pointer; font-weight: 650; font-size: 17px; }
+  details p { color: var(--muted); margin: 10px 0 0; }
+  .final { text-align: center; background: radial-gradient(700px 300px at 50% 120%, rgba(139,92,246,.3), transparent); }
+  footer { border-top: 1px solid var(--border); padding: 30px 0; color: var(--muted); font-size: 14px; }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; }
+  @media (max-width: 640px) { header nav a.hide-sm { display: none; } .hero { padding: 60px 0 50px; } section { padding: 50px 0; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <img src="https://github.com/veyndesk.png" alt="Veyndesk logo">
+    <a class="brand" href="#">Veyndesk</a>
+    <nav>
+      <a class="hide-sm" href="#features">Features</a>
+      <a class="hide-sm" href="#compare">Compare</a>
+      <a class="hide-sm" href="#faq">FAQ</a>
+      <a class="btn primary small" href="https://github.com/veyndesk/veyndesk/releases/latest">Download</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <img src="https://github.com/veyndesk.png" alt="Veyndesk remote desktop app icon">
+      <h1>Free, open-source <span>remote desktop</span><br>for everyone</h1>
+      <p class="lead">Veyndesk is a simple <b>AnyDesk and TeamViewer alternative</b>. Open the app, share your ID and password,
+        and your partner can see and control your PC from anywhere. No account, no setup.</p>
+      <div class="ctas">
+        <a class="btn primary" href="https://github.com/veyndesk/veyndesk/releases/latest">⬇ Download for Windows</a>
+        <a class="btn ghost" href="https://github.com/veyndesk/veyndesk">★ View on GitHub</a>
+      </div>
+      <p class="note">Free for personal and business use · Windows 10 / 11 · Open source (AGPL-3.0)</p>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <h2>Connect in 3 steps</h2>
+      <p class="sub">As easy as AnyDesk, without accounts or licence keys.</p>
+      <div class="grid steps">
+        <div class="card"><h3>Install Veyndesk</h3><p>Install it on both computers. The installer is about 4 MB.</p></div>
+        <div class="card"><h3>Share ID &amp; password</h3><p>Each PC shows its own 9-digit ID and a one-time password.</p></div>
+        <div class="card"><h3>Connect &amp; accept</h3><p>Type the partner's ID, enter the password, and they click Accept. You're in.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="wrap">
+      <h2>Everything you need for remote support</h2>
+      <p class="sub">Fast, private remote access software, built in Rust.</p>
+      <div class="grid">
+        <div class="card"><div class="ico">⚡</div><h3>Direct peer-to-peer</h3><p>Computers connect directly over WebRTC for low latency, with an automatic relay when a network blocks it.</p></div>
+        <div class="card"><div class="ico">🌍</div><h3>Works on any network</h3><p>Home Wi-Fi, office networks, mobile data. No port forwarding and no server to set up.</p></div>
+        <div class="card"><div class="ico">🔒</div><h3>End-to-end encrypted</h3><p>Encrypted connections. The password is never sent over the network, and you accept every session.</p></div>
+        <div class="card"><div class="ico">🖥️</div><h3>Sharp &amp; smooth</h3><p>Adaptive quality sends only the parts of the screen that changed, then sharpens text when the screen is still.</p></div>
+        <div class="card"><div class="ico">⌨️</div><h3>Full control</h3><p>Mouse, keyboard, clipboard sync, special keys and multi-monitor support.</p></div>
+        <div class="card"><div class="ico">🔓</div><h3>Open source</h3><p>Every line of code is on GitHub. Self-host your own server and admin panel if you like.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="compare">
+    <div class="wrap">
+      <h2>Veyndesk vs AnyDesk vs TeamViewer vs RustDesk</h2>
+      <p class="sub">A free remote desktop alternative that you can use at work too.</p>
+      <div class="tablewrap">
+        <table>
+          <thead><tr><th></th><th class="us">Veyndesk</th><th>AnyDesk</th><th>TeamViewer</th><th>RustDesk</th></tr></thead>
+          <tbody>
+            <tr><td>Open source</td><td class="y">Yes</td><td class="n">No</td><td class="n">No</td><td class="y">Yes</td></tr>
+            <tr><td>Free for business use</td><td class="y">Yes</td><td class="n">Paid licence</td><td class="n">Paid licence</td><td class="y">Yes</td></tr>
+            <tr><td>Connect with just ID + password</td><td class="y">Yes</td><td class="y">Yes</td><td class="y">Yes</td><td class="y">Yes</td></tr>
+            <tr><td>Works without setting up a server</td><td class="y">Yes</td><td class="y">Yes</td><td class="y">Yes</td><td class="y">Yes</td></tr>
+            <tr><td>Built-in web admin panel (free)</td><td class="y">Yes</td><td class="n">No</td><td class="n">No</td><td class="p">Pro (paid)</td></tr>
+            <tr><td>Platforms</td><td>Windows</td><td>Win, Mac, Linux, mobile</td><td>Win, Mac, Linux, mobile</td><td>Win, Mac, Linux, mobile</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note" style="text-align:center">AnyDesk and TeamViewer are trademarks of their owners. Veyndesk is an independent project and is not affiliated with them.</p>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap" style="max-width:820px">
+      <h2>Frequently asked questions</h2>
+      <p class="sub">About Veyndesk, the free open-source remote desktop.</p>
+      <details open><summary>Is Veyndesk free?</summary><p>Yes. Veyndesk is free and open source (AGPL-3.0), for personal and business use. There are no paid plans and no licence key.</p></details>
+      <details><summary>Is Veyndesk a good AnyDesk alternative?</summary><p>Veyndesk works like AnyDesk: you open the app, share your ID and password, and your partner connects. Unlike AnyDesk it is open source and free for commercial use. AnyDesk currently supports more platforms; Veyndesk is Windows-only for now.</p></details>
+      <details><summary>Do I need an account or a server?</summary><p>No. Install Veyndesk on both computers and connect with the ID and password. No account, no server setup and no port forwarding are needed.</p></details>
+      <details><summary>Does Veyndesk work on different networks?</summary><p>Yes. Veyndesk connects the two computers directly (peer-to-peer) and automatically uses a relay when a network blocks direct connections, so it works on home Wi-Fi, office networks and mobile data.</p></details>
+      <details><summary>Is it secure?</summary><p>Connections are end-to-end encrypted, the password is never sent over the network (challenge-response), and the person being connected to must press Accept before anyone can see the screen.</p></details>
+      <details><summary>Windows shows a warning when I install it. Why?</summary><p>Veyndesk is new, and its installer isn't code-signed yet, so Windows doesn't recognise the publisher. Code signing is in progress. You can check the source code on GitHub.</p></details>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="wrap">
+      <h2>Try Veyndesk today</h2>
+      <p class="sub">Free remote desktop software for Windows. Download, install, connect.</p>
+      <div class="ctas">
+        <a class="btn primary" href="https://github.com/veyndesk/veyndesk/releases/latest">⬇ Download for Windows</a>
+        <a class="btn ghost" href="https://github.com/veyndesk/veyndesk">★ Star on GitHub</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Veyndesk · Open source under AGPL-3.0</span>
+    <span><a href="https://github.com/veyndesk/veyndesk">GitHub</a> · <a href="https://github.com/veyndesk/veyndesk#privacy-policy">Privacy</a> · <a href="https://github.com/veyndesk/veyndesk/issues">Support</a></span>
+  </div>
+</footer>
+</body>
+</html>
