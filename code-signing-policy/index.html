@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script src="/assets/consent.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Veyndesk Code Signing Policy</title>
+<meta name="description" content="Veyndesk code signing policy: free code signing by SignPath.io with a certificate by SignPath Foundation, what is signed, team roles and privacy.">
+<link rel="canonical" href="https://veyndesk.github.io/code-signing-policy/">
+<meta name="robots" content="index, follow">
+
+<meta name="theme-color" content="#0b0f17">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="stylesheet" href="/assets/site.css">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Veyndesk">
+<meta property="og:title" content="Veyndesk Code Signing Policy">
+<meta property="og:description" content="Veyndesk code signing policy: free code signing by SignPath.io with a certificate by SignPath Foundation, what is signed, team roles and privacy.">
+<meta property="og:url" content="https://veyndesk.github.io/code-signing-policy/">
+<meta property="og:image" content="https://veyndesk.github.io/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Veyndesk", "item": "https://veyndesk.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Code signing policy", "item": "https://veyndesk.github.io/code-signing-policy/"}]}</script>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/assets/logo.png" alt="" width="34" height="34">Veyndesk</a>
+    <nav>
+      <a class="hide-sm" href="/download/">Download</a>
+<a class="hide-sm" href="/docs/getting-started/">Get started</a>
+<a class="hide-sm" href="/help/">Help</a>
+<a class="hide-sm" href="/security/">Security</a>
+<a class="hide-sm" href="/compare/anydesk/">Compare</a>
+      <a class="btn primary small" href="/download/">Download</a>
+    </nav>
+  </div>
+</header>
+<main>
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <span>Code signing policy</span></nav>
+<article class="wrap prose">
+<h1>Code signing policy</h1>
+<p class="lead">How Veyndesk releases are signed, and by whom.</p>
+<p class="updated">Last updated 21 October 2026 · Veyndesk 0.5.0</p>
+
+<p>Free code signing provided by <a href="https://about.signpath.io">SignPath.io</a>, certificate by <a href="https://signpath.org">SignPath Foundation</a>.</p>
+<p class="note-box"><b>Status:</b> Veyndesk is applying to the SignPath Foundation programme. Until the application is approved, Windows releases are <b>not signed</b>
+and Windows shows a SmartScreen warning (<a href="/help/windows-warning/">how to install anyway</a>). This page will be updated when signing starts.</p>
+
+<h2>What is signed</h2>
+<ul>
+<li>Only binaries built by the project's <a href="https://github.com/veyndesk/veyndesk/blob/main/.github/workflows/build.yml">GitHub Actions workflow</a> from the public source code in <a href="https://github.com/veyndesk/veyndesk">github.com/veyndesk/veyndesk</a>.</li>
+<li>Windows: the installer (<code>Veyndesk_x.y.z_x64-setup.exe</code>) and the app (<code>Veyndesk.exe</code>). Each signed file carries the product name “Veyndesk” and its version.</li>
+<li>Nothing built on a personal computer is signed. Third-party programs (for example <code>cloudflared</code>, which the app downloads from Cloudflare's official GitHub releases) are not signed by us.</li>
+</ul>
+
+<h2>Team roles</h2>
+<table class="t"><thead><tr><th>Role</th><th>Members</th></tr></thead><tbody>
+<tr><td>Committers and reviewers</td><td><a href="https://github.com/KavindaBanukaVC">KavindaBanukaVC</a></td></tr>
+<tr><td>Approvers</td><td><a href="https://github.com/KavindaBanukaVC">KavindaBanukaVC</a></td></tr>
+</tbody></table>
+<p>Changes from outside contributors are reviewed before they are merged. Every signing request is approved manually by an approver. Team members use multi-factor authentication for GitHub and SignPath.</p>
+
+<h2>Privacy</h2>
+<p>Veyndesk sends no analytics or telemetry and has no accounts. While it is running, it contacts only the services needed to make the computer reachable and to set up
+remote sessions (a public message service to find partners by ID, STUN servers, and a Cloudflare relay). Screen content and input go only to a partner you connected with.
+Exactly what is sent to each service is listed on the <a href="/privacy/">privacy page</a>.</p>
+
+<h2>Uninstall</h2>
+<p>Windows: Settings → Apps → Veyndesk → Uninstall. macOS: drag Veyndesk to the Trash. Linux: <code>sudo apt remove veyndesk</code> or delete the AppImage.</p>
+
+</article>
+</main>
+<footer>
+  <div class="wrap">
+    <div>
+      <b>Veyndesk</b> · free, open-source remote desktop (AGPL-3.0)<br>
+      <span class="muted">Latest version 0.5.0. Not affiliated with AnyDesk, TeamViewer or RustDesk.</span>
+    </div>
+    <div class="flinks">
+      <a href="/download/">Download</a> <a href="/docs/getting-started/">Get started</a> <a href="/help/">Help</a>
+      <a href="/security/">Security</a> <a href="/privacy/">Privacy</a> <a href="/about/">About</a>
+      <a href="/changelog/">Changelog</a> <a href="https://github.com/veyndesk/veyndesk">GitHub</a> <a href="/code-signing-policy/">Code signing policy</a> <a href="/privacy/#website" data-cookie-settings>Cookie settings</a>
+    </div>
+  </div>
+</footer>
+<script>
+(function(){var u=navigator.userAgent,o=/Mac/i.test(u)&&!/iPhone|iPad/.test(u)?'mac':/Linux|X11/i.test(u)&&!/Android/i.test(u)?'linux':/Win/i.test(u)?'win':null;
+if(!o)return;var n={win:'Windows',mac:'macOS',linux:'Linux'}[o];document.querySelectorAll('[data-dl-main]').forEach(function(b){b.textContent='⬇ Download for '+n;b.href='/download/'+{win:'windows',mac:'macos',linux:'linux'}[o]+'/';});
+var c=document.querySelector('.dl [data-os="'+o+'"]');if(c)c.classList.add('mine');})();
+</script>
+</body>
+</html>
