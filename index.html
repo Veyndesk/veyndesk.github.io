@@ -19,7 +19,7 @@
 <meta property="og:url" content="https://veyndesk.github.io/">
 <meta property="og:image" content="https://veyndesk.github.io/assets/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Veyndesk", "applicationCategory": "UtilitiesApplication", "applicationSubCategory": "Remote desktop software", "operatingSystem": "Windows 10, Windows 11, macOS 10.15 or later, Linux (x86-64, X11)", "softwareVersion": "0.5.0", "datePublished": "2026-10-21", "description": "Veyndesk is free, open-source remote desktop software for Windows, macOS and Linux. Like AnyDesk, each computer shows a 9-digit ID and a password; your partner enters them to see and control your screen. The source code is on GitHub under the AGPL-3.0 licence.", "url": "https://veyndesk.github.io/", "downloadUrl": "https://github.com/veyndesk/veyndesk/releases/latest", "license": "https://www.gnu.org/licenses/agpl-3.0.html", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "screenshot": "https://veyndesk.github.io/assets/img/01-main.png", "sameAs": ["https://github.com/veyndesk/veyndesk", "https://github.com/veyndesk"], "author": {"@id": "https://veyndesk.github.io/#org"}, "publisher": {"@id": "https://veyndesk.github.io/#org"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Veyndesk", "applicationCategory": "UtilitiesApplication", "applicationSubCategory": "Remote desktop software", "operatingSystem": "Windows 10, Windows 11, macOS 10.15 or later, Linux (x86-64, X11)", "softwareVersion": "0.5.1", "datePublished": "2026-10-21", "description": "Veyndesk is free, open-source remote desktop software for Windows, macOS and Linux. Like AnyDesk, each computer shows a 9-digit ID and a password; your partner enters them to see and control your screen. The source code is on GitHub under the AGPL-3.0 licence.", "url": "https://veyndesk.github.io/", "downloadUrl": "https://github.com/veyndesk/veyndesk/releases/latest", "license": "https://www.gnu.org/licenses/agpl-3.0.html", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "screenshot": "https://veyndesk.github.io/assets/img/01-main.png", "sameAs": ["https://github.com/veyndesk/veyndesk", "https://github.com/veyndesk"], "author": {"@id": "https://veyndesk.github.io/#org"}, "publisher": {"@id": "https://veyndesk.github.io/#org"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "@id": "https://veyndesk.github.io/#org", "name": "Veyndesk", "alternateName": "Veyndesk remote desktop", "url": "https://veyndesk.github.io/", "logo": "https://veyndesk.github.io/assets/logo.png", "description": "Open-source project that makes Veyndesk, a free remote desktop app for Windows, macOS and Linux.", "sameAs": ["https://github.com/veyndesk", "https://github.com/veyndesk/veyndesk"]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "@id": "https://veyndesk.github.io/#website", "name": "Veyndesk", "url": "https://veyndesk.github.io/", "publisher": {"@id": "https://veyndesk.github.io/#org"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "Veyndesk source code", "codeRepository": "https://github.com/veyndesk/veyndesk", "programmingLanguage": "Rust", "license": "https://www.gnu.org/licenses/agpl-3.0.html", "targetProduct": {"@type": "SoftwareApplication", "name": "Veyndesk", "url": "https://veyndesk.github.io/"}, "author": {"@id": "https://veyndesk.github.io/#org"}}</script>
@@ -52,7 +52,7 @@
       <a class="btn primary" data-dl-main href="/download/">⬇ Download Veyndesk</a>
       <a class="btn ghost" href="/docs/getting-started/">How it works</a>
     </div>
-    <p class="note center">Version 0.5.0 · Free for personal and business use · Open source (AGPL-3.0)</p>
+    <p class="note center">Version 0.5.1 · Free for personal and business use · Open source (AGPL-3.0)</p>
   </div>
 </section>
 
@@ -78,13 +78,14 @@
 <section id="features">
   <div class="wrap">
     <h2>What it does today</h2>
-    <p class="sub">Features in version 0.5.0, and what's not there yet.</p>
+    <p class="sub">Features in version 0.5.1, and what's not there yet.</p>
     <div class="grid">
       <div class="card"><div class="ico">⚡</div><h3>Direct connection, relay fallback</h3><p>Connects the two computers directly (WebRTC). If that fails within about 7 seconds, it uses a relay through Cloudflare.</p></div>
       <div class="card"><div class="ico">🔑</div><h3>Password never sent</h3><p>A challenge–response check proves the password without sending it. 8 wrong attempts in 5 minutes block further tries for a while.</p></div>
       <div class="card"><div class="ico">✋</div><h3>Accept / Deny prompt</h3><p>One-time-password sessions ask the remote person first. Permanent-password (unattended) sessions don't. <a href="/security/#unattended">Learn more</a></p></div>
       <div class="card"><div class="ico">🖥️</div><h3>Screen, mouse and keyboard</h3><p>Adaptive quality, sharper text when the screen is still, multi-monitor, clipboard text sync.</p></div>
       <div class="card"><div class="ico">🏠</div><h3>Works on the local network</h3><p>Computers on the same network find each other automatically, and you can also connect by IP address.</p></div>
+      <div class="card"><div class="ico">🌐</div><h3>English and Türkçe</h3><p>The app, browser viewer and admin panel are available in English and Turkish. Translations are welcome on GitHub.</p></div>
       <div class="card"><div class="ico">🔓</div><h3>Open source</h3><p>All code is on GitHub. You can run your own server with a web admin panel and audit log.</p></div>
     </div>
     <h3 class="mt">Known limitations</h3>
@@ -115,7 +116,7 @@ certificate by <a href="https://signpath.org">SignPath Foundation</a>. Windows r
 <thead><tr><th>Scenario</th><th>Status</th><th>Notes</th></tr></thead>
 <tbody>
 <tr><td>Two Windows PCs on the same network</td><td class="y">Tested</td><td>Connect by ID or IP, accept, control.</td></tr>
-<tr><td>Two Linux apps, connect by ID (direct P2P)</td><td class="y">Tested</td><td>ID → password → Accept → live session, X11 (the screenshots in the <a href="/docs/getting-started/">guide</a>), 21 October 2026.</td></tr>
+<tr><td>Two Linux apps, connect by ID (direct P2P)</td><td class="y">Tested</td><td>ID → password → Accept → live session, X11 (the screenshots in the <a href="/docs/getting-started/">guide</a>), 31 October 2026.</td></tr>
 <tr><td>Linux screen capture and mouse/keyboard control</td><td class="y">Tested</td><td>X11 only.</td></tr>
 <tr><td>Computers on different networks (home ↔ office, mobile data)</td><td class="p">Limited testing</td><td>Uses direct P2P, then the relay. Some networks block both; see <a href="/help/connection-failed/">Connection failed</a>.</td></tr>
 <tr><td>macOS (Apple Silicon and Intel)</td><td class="p">Builds, not yet tested on a real Mac</td><td>Please <a href="https://github.com/veyndesk/veyndesk/issues">report</a> how it works for you.</td></tr>
@@ -153,7 +154,7 @@ certificate by <a href="https://signpath.org">SignPath Foundation</a>. Windows r
   <div class="wrap">
     <div>
       <b>Veyndesk</b> · free, open-source remote desktop (AGPL-3.0)<br>
-      <span class="muted">Latest version 0.5.0. Not affiliated with AnyDesk, TeamViewer or RustDesk.</span>
+      <span class="muted">Latest version 0.5.1. Not affiliated with AnyDesk, TeamViewer or RustDesk.</span>
     </div>
     <div class="flinks">
       <a href="/download/">Download</a> <a href="/docs/getting-started/">Get started</a> <a href="/help/">Help</a>
